@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
 .landingPageContainer {
   height: 100%;
   width: 100%;
@@ -14,11 +15,25 @@
   width: 100%;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   position: absolute;
   top: 0;
 }
 
-.navBar {
+.menuIcon {
+  display: none;
+  z-index: 2;
+  font-size: 2rem;
+  color: white;
+  margin-left: 10px;
+  position: relative;
+}
+
+.verticalNavBar {
+  display: none;
+}
+
+.horizontalNavBar {
   height: 100%;
   width: fit-content;
   display: flex;
@@ -30,6 +45,8 @@
   font-family: "Kanit", sans-serif;
   margin-left: 15px;
   cursor: pointer;
+  display: flex;
+  align-items: center;
 }
 
 .navBarElement:hover {
@@ -70,8 +87,8 @@
   font-weight: 400;
   color: white;
   position: relative;
-  margin: 0%;
-  padding: 0%;
+  margin: 0;
+  padding: 0;
 }
 
 .glow-effect {
@@ -86,8 +103,8 @@
   font-size: 2rem;
   color: whitesmoke;
   position: relative;
-  margin: 0%;
-  padding: 0%;
+  margin: 0;
+  padding: 0;
 }
 
 .abovePrakalpaTitle {
@@ -95,8 +112,8 @@
   font-size: 2.3rem;
   color: white;
   position: relative;
-  margin: 0%;
-  padding: 0%;
+  margin: 0;
+  padding: 0;
 }
 
 .videoBackground {
@@ -107,4 +124,84 @@
   width: 100%;
   object-fit: cover;
   z-index: -1;
+}
+
+.verticalNavBar {
+  height: 100%;
+  width: 200px;
+  position: fixed;
+  top: 0;
+  left: -200px;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: left 0.3s ease;
+  z-index: 1;
+}
+
+.verticalNavBar.open {
+  left: 0;
+}
+
+.verticalNavBar .navBarElement {
+  margin: 20px 0;
+}
+
+@media screen and (max-width: 768px) {
+  .landingPageHeader {
+    height: 10%;
+  }
+
+  .menuIcon {
+    display: block;
+    font-size: 2rem;
+    color: white;
+    margin-left: 10px;
+  }
+
+  .horizontalNavBar {
+    display: none;
+  }
+
+  .landingPageMain {
+    height: 90%;
+  }
+
+  .prakalpaTitle {
+    font-size: 3rem;
+  }
+
+  .prakalpaSubtitle {
+    font-size: 1.5rem;
+  }
+
+  .abovePrakalpaTitle {
+    font-size: 1.8rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .horizontalNavBar {
+    display: none;
+  }
+
+  .prakalpaTitle {
+    font-size: 2.5rem;
+  }
+
+  .prakalpaSubtitle {
+    font-size: 1.2rem;
+  }
+
+  .abovePrakalpaTitle {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .verticalNavBar {
+    display: none;
+  }
 }
