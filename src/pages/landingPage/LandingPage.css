@@ -1,0 +1,101 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+.landingPageContainer {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.landingPageHeader {
+  height: 12%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  top: 0;
+}
+
+.navBar {
+  height: 100%;
+  width: fit-content;
+  display: flex;
+}
+
+.navBarElement {
+  color: rgb(36, 181, 181);
+  font-size: 1.5rem;
+  font-family: "Kanit", sans-serif;
+  margin-left: 15px;
+  cursor: pointer;
+}
+
+.navBarElement:hover {
+  text-shadow: 0 0 2px rgba(0, 255, 255, 0.3), 0 0 10px rgba(0, 255, 255, 0.4),
+    0 0 10px rgba(0, 255, 255, 0.5), 0 0 15px rgba(47, 68, 68, 0.4),
+    0 0 20px rgba(0, 255, 255, 0.3);
+}
+
+.landingPageHeader > .headerLogos {
+  height: 100%;
+  width: fit-content;
+  display: flex;
+}
+
+.headerLogos > * {
+  height: 100%;
+  width: fit-content;
+  margin: 0 10px;
+}
+
+.headerLogos > a > img {
+  height: 100%;
+  width: auto;
+}
+
+.prakalpaTitle {
+  font-family: "Nunito", sans-serif;
+  font-size: 5rem;
+  font-weight: 400;
+  color: white;
+  position: relative;
+  margin: 0%;
+  padding: 0%;
+}
+
+.glow-effect {
+  color: white;
+  text-shadow: 0 0 5px rgba(255, 238, 175, 0.3),
+    0 0 10px rgba(255, 238, 175, 0.4), 0 0 15px rgba(255, 238, 175, 0.5),
+    0 0 20px rgba(255, 238, 175, 0.4), 0 0 25px rgba(255, 238, 175, 0.3);
+}
+
+.prakalpaSubtitle {
+  font-family: "Protest Strike", sans-serif;
+  font-size: 2rem;
+  color: whitesmoke;
+  position: relative;
+  margin: 0%;
+  padding: 0%;
+}
+
+.abovePrakalpaTitle {
+  font-family: "Protest Strike", sans-serif;
+  font-size: 2.3rem;
+  color: white;
+  position: relative;
+  margin: 0%;
+  padding: 0%;
+}
+
+.videoBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
