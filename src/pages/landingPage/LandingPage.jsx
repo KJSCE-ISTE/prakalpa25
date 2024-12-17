@@ -20,9 +20,11 @@ const LandingPage = () => {
                     <a href='https://istekjsce.com'> <img className="isteLogo" src="https://github.com/user-attachments/assets/1c7a4ac6-3f74-4577-b720-4344e673749c" alt="ISTE Logo" /></a>
                 </div>
             </header>
-            <h2 className="abovePrakalpaTitle">ISTE KJSCE presents</h2>
-            <h1 className="prakalpaTitle glow-effect">PRAKALPA 25</h1>
-            <h3 className="prakalpaSubtitle ">From Blueprint to Breakthrough</h3>
+            <main className="landingPageMain">
+                <h2 className="abovePrakalpaTitle">ISTE KJSCE presents</h2>
+                <h1 className="prakalpaTitle glow-effect">PRAKALPA 25</h1>
+                <h3 className="prakalpaSubtitle ">From Blueprint to Breakthrough</h3>
+            </main>
         </div>
     );
 }
