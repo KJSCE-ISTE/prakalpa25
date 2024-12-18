@@ -1,7 +1,8 @@
 import React, { useEffect, useState, useRef } from 'react';
 import './LandingPage.css';
-// import globeVideo from "../../assets/globe.mp4";
-import globeWebm from "../../assets/globe.webm";
+// import globeVideo from "../../assets/landingPage/globe.mp4";
+import globeWebm from "../../assets/landingPage/globe.webm";
+import firstFrameFallback from "../../assets/landingPage/firstFrameFallback.png";
 
 const LandingPage = () => {
     const [isNavOpen, setIsNavOpen] = useState(false);
@@ -72,7 +73,7 @@ const LandingPage = () => {
                 <h3 className="navBarContact navBarElement">Contact</h3>
             </nav>
             <main className="landingPageMain">
-                <video className="videoBackground" autoPlay loop muted>
+                <video className="videoBackground" autoPlay loop muted poster={firstFrameFallback}>
                     {/* <source src={globeVideo} type="video/mp4" /> */}
                     <source src={globeWebm} type="video/webm" />
                 </video>
