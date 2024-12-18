@@ -16,13 +16,16 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: absolute;
+  position: fixed;
   top: 0;
+  /* background-color: rgb(28, 25, 25); */
+  backdrop-filter: blur(15px);
+  z-index: 2;
 }
 
 .menuIcon {
   display: none;
-  z-index: 2;
+  z-index: 3;
   font-size: 2rem;
   color: white;
   margin-left: 10px;
@@ -44,17 +47,16 @@
   color: whitesmoke;
   font-size: 1.5rem;
   font-family: "Kanit", sans-serif;
-  margin-left: 15px;
+  margin-left: 20px;
   cursor: pointer;
   display: flex;
   align-items: center;
 }
 
 .navBarElement:hover {
-  text-shadow: 0 0 5px rgba(255, 238, 175, 0.3),
-  0 0 10px rgba(255, 238, 175, 0.4), 0 0 15px rgba(255, 238, 175, 0.5),
-  0 0 20px rgba(255, 238, 175, 0.4), 0 0 25px rgba(255, 238, 175, 0.3);
-  text-decoration: underline;
+  text-shadow: 0 0 2px rgba(0, 255, 255, 0.3), 0 0 10px rgba(0, 255, 255, 0.4),
+    0 0 10px rgba(0, 255, 255, 0.5), 0 0 15px rgba(47, 68, 68, 0.4),
+    0 0 20px rgba(0, 255, 255, 0.3);
 }
 
 .landingPageHeader > .headerLogos {
