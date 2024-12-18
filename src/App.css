@@ -1,0 +1,14 @@
+.card-container{
+    display: flex;
+    flex-wrap: wrap;
+
+}
+/* @media (max-width: 800px) {
+    .card {
+        display: flex;
+      flex-direction: column;
+    }} */
+.themes{
+    text-align: center;
+    font-size: 45px;
+}
