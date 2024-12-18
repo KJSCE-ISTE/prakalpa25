@@ -1,21 +1,32 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import './LandingPage.css';
-import globeVideo from "../../assets/globe.mp4";
+// import globeVideo from "../../assets/landingPage/globe.mp4";
+import globeWebm from "../../assets/landingPage/globe.webm";
+import firstFrameFallback from "../../assets/landingPage/firstFrameFallback.png";
 
 const LandingPage = () => {
     const [isNavOpen, setIsNavOpen] = useState(false);
+    const navRef = useRef(null);
+    const menuIconRef = useRef(null);
 
     const toggleNav = () => {
         setIsNavOpen((prev) => !prev);
     };
 
+    const handleClickOutside = (event) => {
+        if (isNavOpen &&
+            navRef.current &&
+            !navRef.current.contains(event.target) &&
+            !menuIconRef.current.contains(event.target)) {
+            setIsNavOpen(false);
+        }
+    };
+
     return (
-        <div className="landingPageContainer">
-            <video className="videoBackground" autoPlay loop muted>
-                <source src={globeVideo} type="video/mp4" />
-            </video>
+        <div className="landingPageContainer" onClick={handleClickOutside}>
             <header className="landingPageHeader">
                 <svg
+                    ref={menuIconRef}
                     onClick={toggleNav}
                     width="40"
                     height="40"
@@ -55,13 +66,17 @@ const LandingPage = () => {
                     </a>
                 </div>
             </header>
-            <nav className={`verticalNavBar ${isNavOpen ? 'open' : ''}`}>
+            <nav ref={navRef} className={`verticalNavBar ${isNavOpen ? 'open' : ''}`}>
                 <h3 className="navBarHome navBarElement">Home</h3>
                 <h3 className="navBarEvents navBarElement">Events</h3>
                 <h3 className="navBarAbout navBarElement">About</h3>
                 <h3 className="navBarContact navBarElement">Contact</h3>
             </nav>
             <main className="landingPageMain">
+                <video className="videoBackground" autoPlay loop muted poster={firstFrameFallback}>
+                    {/* <source src={globeVideo} type="video/mp4" /> */}
+                    <source src={globeWebm} type="video/webm" />
+                </video>
                 <h2 className="abovePrakalpaTitle">ISTE KJSCE presents</h2>
                 <h1 className="prakalpaTitle glow-effect">PRAKALPA 25</h1>
                 <h3 className="prakalpaSubtitle">From Blueprint to Breakthrough</h3>
