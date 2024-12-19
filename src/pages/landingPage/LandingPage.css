@@ -10,79 +10,15 @@
   align-items: center;
 }
 
-.landingPageHeader {
-  height: 12%;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: fixed;
-  top: 0;
-  /* background-color: rgb(28, 25, 25); */
-  backdrop-filter: blur(15px);
-  z-index: 1;
-}
-
-.menuIcon {
-  display: none;
-  z-index: 3;
-  font-size: 2rem;
-  color: white;
-  margin-left: 10px;
-  position: relative;
-}
-
-.verticalNavBar {
-  display: none;
-}
-
-.horizontalNavBar {
-  height: 100%;
-  width: fit-content;
-  display: flex;
-  gap: 30px;
-}
-
-.navBarElement {
-  color: whitesmoke;
-  font-size: 1.5rem;
-  font-family: "Kanit", sans-serif;
-  margin-left: 20px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-}
-
-.navBarElement:hover {
-  text-shadow: 0 0 2px rgba(0, 255, 255, 0.3), 0 0 10px rgba(0, 255, 255, 0.4),
-    0 0 10px rgba(0, 255, 255, 0.5), 0 0 15px rgba(47, 68, 68, 0.4),
-    0 0 20px rgba(0, 255, 255, 0.3);
-}
-
-.landingPageHeader > .headerLogos {
-  height: 100%;
-  width: fit-content;
-  display: flex;
-}
-
-.headerLogos > * {
-  height: 100%;
-  width: fit-content;
-  margin: 0 10px;
-}
-
-.headerLogos > a > img {
-  height: 100%;
-  width: auto;
-}
-
 .landingPageMain {
-  height: 100%;
+  height: 90%;
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: absolute;
+  top: 10%;
 }
 
 .prakalpaTitle {
@@ -130,29 +66,6 @@
   z-index: -1;
 }
 
-.verticalNavBar {
-  height: 100%;
-  width: 200px;
-  position: fixed;
-  top: 0;
-  left: -200px;
-  background-color: rgba(0, 0, 0, 0.9);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  transition: left 0.3s ease;
-  z-index: 2;
-}
-
-.verticalNavBar.open {
-  left: 0;
-}
-
-.verticalNavBar .navBarElement {
-  margin: 20px 0;
-}
-
 @media screen and (max-width: 768px) {
   .landingPageHeader {
     height: 10%;
@@ -163,10 +76,6 @@
     font-size: 2rem;
     color: white;
     margin-left: 10px;
-  }
-
-  .horizontalNavBar {
-    display: none;
   }
 
   .landingPageMain {
@@ -184,28 +93,46 @@
   .abovePrakalpaTitle {
     font-size: 1.8rem;
   }
+
+  .verticalNavBar {
+    width: 200px;
+    left: -300px;
+  }
+
+  .verticalNavBar::before {
+    border-left: 100px solid #131315e6;
+  }
+
+  .navBarElement {
+    font-size: 1.5rem;
+    padding-left: 20px;
+  }
 }
 
 @media screen and (max-width: 480px) {
-  .horizontalNavBar {
-    display: none;
-  }
-
   .prakalpaTitle {
-    font-size: 2.5rem;
+    font-size: 2.8rem;
   }
 
   .prakalpaSubtitle {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
   }
 
   .abovePrakalpaTitle {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
   }
-}
 
-@media screen and (min-width: 769px) {
   .verticalNavBar {
-    display: none;
+    width: 150px;
+    left: -240px;
+  }
+
+  .verticalNavBar::before {
+    border-left: 90px solid #131315e6;
+  }
+
+  .navBarElement {
+    font-size: 1.5rem;
+    padding-left: 30px;
   }
 }

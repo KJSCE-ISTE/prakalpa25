@@ -1,0 +1,119 @@
+.header {
+  height: 10%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  background-color: rgba(26, 26, 29, 01);
+  backdrop-filter: blur(3px);
+}
+
+.menuIcon {
+  display: block;
+  z-index: 3;
+  font-size: 2rem;
+  color: white;
+  margin-left: 10px;
+  position: relative;
+}
+
+.verticalNavBar {
+  height: 100%;
+  width: 250px;
+  position: fixed;
+  top: 0;
+  left: -400px;
+  background-color: #131315e6;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: left 0.3s ease;
+  z-index: 2;
+}
+
+.verticalNavBar.open {
+  left: 0;
+}
+
+.verticalNavBar::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 100%;
+  width: 0;
+  height: 0;
+  border-left: 150px solid #131315e6;
+  border-top: 100vh solid transparent;
+}
+
+.verticalNavBar .navBarElement {
+  margin: 20px 0;
+}
+
+.navBarElement {
+  color: whitesmoke;
+  font-size: 1.8rem;
+  font-family: "Kanit", sans-serif;
+  margin-left: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+}
+
+.navBarElement:hover {
+  text-shadow: 0 0 2px rgba(0, 255, 255, 0.3), 0 0 10px rgba(0, 255, 255, 0.4),
+    0 0 10px rgba(0, 255, 255, 0.5), 0 0 15px rgba(47, 68, 68, 0.4),
+    0 0 20px rgba(0, 255, 255, 0.3);
+}
+
+.header > .headerLogos {
+  height: 100%;
+  width: fit-content;
+  display: flex;
+}
+
+.headerLogos > * {
+  height: 100%;
+  width: fit-content;
+  margin: 0 10px;
+}
+
+.headerLogos > a > img {
+  height: 100%;
+  width: auto;
+}
+
+@media (max-width: 768px) {
+  .verticalNavBar {
+    width: 200px;
+    left: -300px;
+  }
+
+  .verticalNavBar::before {
+    border-left: 100px solid #131315e6;
+  }
+
+  .navBarElement {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .verticalNavBar {
+    width: 180px;
+    left: -280px;
+  }
+
+  .verticalNavBar::before {
+    border-left: 100px solid #131315e6;
+  }
+
+  .navBarElement {
+    font-size: 1.5rem;
+  }
+}
