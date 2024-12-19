@@ -1,5 +1,7 @@
 import React, { useEffect, useState, useRef } from 'react';
 import './LandingPage.css';
+import isteLogo from "../../assets/global/IsteFinal.svg";
+import kjsceLogo from "../../assets/global/kjsce_white.svg";
 // import globeVideo from "../../assets/landingPage/globe.mp4";
 import globeWebm from "../../assets/landingPage/globe.webm";
 import firstFrameFallback from "../../assets/landingPage/firstFrameFallback.png";
@@ -53,14 +55,14 @@ const LandingPage = () => {
                     <a href="https://kjsce.somaiya.edu">
                         <img
                             className="kjsceLogo"
-                            src="https://github.com/user-attachments/assets/934d6f07-24e6-4eb0-982e-fb66992ef9ec"
+                            src={kjsceLogo}
                             alt="KJSCE Logo"
                         />
                     </a>
                     <a href="https://istekjsce.com">
                         <img
                             className="isteLogo"
-                            src="https://github.com/user-attachments/assets/b382cc5a-4a04-47a1-b3e9-0b7e6bbfcdcc"
+                            src={isteLogo}
                             alt="ISTE Logo"
                         />
                     </a>
