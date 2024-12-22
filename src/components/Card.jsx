@@ -1,13 +1,26 @@
-import React from 'react'
-import "../styles/Card.css"
-const Card = (props) => {
+import React, { useState } from 'react';
+import './Card.css';
+
+function Card({ src, title, description }) {
+  const [flipped, setFlipped] = useState(false);
+
+  const handleFlip = () => {
+    setFlipped(!flipped);
+  };
+
   return (
-    <div className='card'>
-      <img src={props.src} alt="Card Image" />
-      <h1>{props.title}</h1>
-      <p>{props.description}</p>
+    <div className={`card ${flipped ? 'flipped' : ''}`} onClick={handleFlip}>
+      <div className="card-inner">
+        <div className="card-front">
+          <img src={src} alt={title} />
+          <h2>{title}</h2>
+        </div>
+        <div className="card-back">
+          <p>{description}</p>
+        </div>
+      </div>
     </div>
-  )
+  );
 }
 
-export default Card
+export default Card;
