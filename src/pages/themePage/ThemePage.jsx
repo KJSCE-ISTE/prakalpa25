@@ -29,7 +29,9 @@ const ThemePage = () => {
           </div>
         </div>
       </div>
-      <ProjectsSection />
+      <div className="theme-page-bg">
+        <ProjectsSection />
+      </div>
     </>
   );
 }

@@ -31,6 +31,7 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px; /* Adjust spacing between cards */
+  margin-bottom: 0; /* Remove unnecessary white space */
 }
 
 .card {
@@ -99,6 +100,11 @@ body {
   z-index: 1;
   padding: 20px;
   transition: background-image 1s ease-in-out; /* Smooth transition */
+}
+
+.theme-page-bg {
+  background-color: #1e1e2f; /* Match the background color of the project section */
+  padding: 0; /* Remove unnecessary padding */
 }
 
 /* Background styles for landing page */

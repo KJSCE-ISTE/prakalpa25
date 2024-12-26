@@ -104,8 +104,10 @@ const ProjectsSection = () => {
               <p>2<sup>nd</sup> Prize: Rs. 3,500/-</p>
             </div>
           </div>
-          <p>• Participation certificate for all participants</p>
-          <p>• Consolation prizes may be awarded based on recommendations from judges. Decision of judges will be binding on participants.</p>
+          <div className="additional-info">
+            <p>• Participation certificate for all participants</p>
+            <p>• Consolation prizes may be awarded based on recommendations from judges. Decision of judges will be binding on participants.</p>
+          </div>
         </div>
       </div>
     </div>
