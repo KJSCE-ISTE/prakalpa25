@@ -29,7 +29,7 @@ body {
 .card-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: center; 
   gap: 20px; /* Adjust spacing between cards */
   margin-bottom: 0; /* Remove unnecessary white space */
 }

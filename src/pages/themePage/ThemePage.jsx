@@ -3,7 +3,6 @@ import './ThemePage.css';
 import Card from '../../components/Card';
 import videoBg from '../../assets/themePage/videoBg.mp4';
 import bgImage from '../../assets/themePage/bgImage.jpeg';
-import ProjectsSection from "./ProjectsSection";
 
 const ThemePage = () => {
   return (
@@ -28,9 +27,6 @@ const ThemePage = () => {
             <Card src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMZUIdzX2bbh16fjfvn1aaHE2K6EtfkanWcQ&s" title="Renewable Energy Technology" description="K. J. Somaiya School of Engineering and the ISTE Students’ Chapter (MH 60) is organizing the 16th edition of national level project competition and paper presentation, PRAKALPA on 4th April 2025. The theme of this year’s Prakalpa is TECHNOVATE. This competition is open to all UG / PG students of engineering colleges. The TECHNOVATE is a distinguished platform, where visionaries, innovators, and technological virtuosos will come together to illuminate the forefront of innovation. It is an extravagant showcase of latest marvels and breakthroughs in the realm of technology." />
           </div>
         </div>
-      </div>
-      <div className="theme-page-bg">
-        <ProjectsSection />
       </div>
     </>
   );

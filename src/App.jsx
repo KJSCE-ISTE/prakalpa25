@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import LandingPage from './pages/landingPage/LandingPage';
 import ThemePage from './pages/themePage/ThemePage';
 import Header from './components/Header';
+import ProjectsSection from './pages/projectPage/ProjectsSection';
 
 function App() {
   useEffect(() => {
@@ -24,6 +25,7 @@ function App() {
       <Header />
       <LandingPage />
       <ThemePage />
+      <ProjectsSection />
     </>
   );
 }

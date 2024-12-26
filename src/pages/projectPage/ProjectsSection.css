@@ -5,38 +5,46 @@ body {
   padding: 0;
   overflow-x: hidden;
   font-family: 'Poppins', sans-serif;
-}
-
-.projects-section {
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
-  background: #1e1e2f; /* Match the background color of the theme page */
+  background: #1e1e2f; /*Match the background color of the theme page*/
   color: #ffffff;
 }
 
-#canvas-bg {
+/* Projects Section */
+.projects-section {
+  padding-top: 140px;
+  padding-bottom: 0px;
+  width: 100%;
+  min-height: 100vh; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+/* #canvas-bg {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 1;
-}
+  z-index: 1; 
+} */
 
 .projects-content {
-  position: relative;
+  /* position: relative;
   z-index: 2;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 100%;
-  text-align: center;
+  text-align: center; */
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-.section-title {
+.section-title-project {
   font-size: 2.5rem;
   font-weight: bold;
   margin-bottom: 2rem;
@@ -44,13 +52,20 @@ body {
   animation: fadeIn 2s ease-in-out;
 }
 
+.section-title-prize {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 0rem;
+  margin-top: 0rem;
+  color: #f3f3f3;
+  animation: fadeIn 2s ease-in-out;
+}
+
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 1.5rem;
-  padding: 0 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
+  padding: 0 1rem;
 }
 
 .project-card {
@@ -61,6 +76,7 @@ body {
   transition: transform 0.3s, box-shadow 0.3s;
   cursor: pointer;
   animation: slideIn 1s ease-in-out;
+  text-align: center;
 }
 
 .project-card:hover {
@@ -79,18 +95,25 @@ body {
   color: #d1d1d1;
 }
 
+/* Prizes Section */
 .prizes-section {
-  margin-top: 3rem;
+  padding-bottom: 40px;
   text-align: center;
   animation: fadeIn 2s ease-in-out;
 }
 
+#p {
+  color: #f3f3f3;
+  font-size: 1rem;
+}
+
 .prizes-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 2rem;
   margin-top: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .prize-card {
@@ -98,9 +121,8 @@ body {
   border-radius: 8px;
   padding: 1.5rem;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  text-align: center;
   transition: transform 0.3s, box-shadow 0.3s;
-  width: 250px;
-  animation: slideIn 1s ease-in-out;
 }
 
 .prize-card:hover {
@@ -119,13 +141,17 @@ body {
   color: #d1d1d1;
 }
 
+/* Additional Information */
 .additional-info {
   margin-top: 2rem;
   font-size: 1rem;
   color: #d1d1d1;
+  text-align: center;
+  padding: 0 1rem;
   animation: fadeIn 2s ease-in-out;
 }
 
+/* Animations */
 @keyframes fadeIn {
   from {
     opacity: 0;
