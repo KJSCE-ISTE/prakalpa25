@@ -3,6 +3,7 @@ import LandingPage from './pages/landingPage/LandingPage';
 import ThemePage from './pages/themePage/ThemePage';
 import Header from './components/Header';
 import ProjectsSection from './pages/projectPage/ProjectsSection';
+import PrizesBg from './pages/prizeBg/PrizesBg';
 
 function App() {
   useEffect(() => {
@@ -26,6 +27,7 @@ function App() {
       <LandingPage />
       <ThemePage />
       <ProjectsSection />
+      <PrizesBg />
     </>
   );
 }
