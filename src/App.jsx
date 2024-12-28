@@ -4,6 +4,8 @@ import ThemePage from './pages/themePage/ThemePage';
 import Header from './components/Header';
 import ProjectsSection from './pages/projectPage/ProjectsSection';
 
+
+
 import Footer from './components/Footer';
 
 import PrizesBg from './pages/prizeBg/PrizesBg';
