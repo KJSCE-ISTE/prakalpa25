@@ -1,0 +1,101 @@
+/* Footer background and text */
+.footer {
+  background-color: rgb(17, 17, 20);
+  color: #fff;
+  padding: 5px 0;
+}
+
+/* Container for the footer content */
+.logo-container {
+  display: flex;                /* Enable flexbox layout */
+  flex-direction: column;       /* Stack items vertically */
+  align-items: center;          /* Center items horizontally */
+  justify-content: center;      /* Center items vertically */
+  text-align: center;           /* Center-align the text */
+  margin: 20px 0;               /* Add some vertical spacing */
+}
+
+.isteLogo {
+  height: 90px;                 /* Adjust logo height */
+  width: auto;                  /* Maintain aspect ratio */
+  margin-bottom: 10px;          /* Add space below the logo */
+}
+
+.logo-text {
+  font-family: "Protest Strike", sans-serif; /* Font family */
+  font-size: 1.5rem;           /* Adjust font size */
+  color: white;                /* Text color */
+}
+
+.logo-subtext {
+  font-size: 1rem;             /* Smaller font size for subtext */
+  color: blue;                 /* Initial link color */
+  text-decoration: none;       /* Remove underline */
+  margin-top: 5px;    
+  text-decoration: underline;         /* Add some space above */
+}
+
+.logo-subtext:hover {
+  color: #044484;              /* Change color on hover */
+  text-decoration: underline;  /* Add underline on hover */
+}
+
+.social-links {
+  display: flex;  /* Display icons horizontally */
+  justify-content: right;  
+  margin-right: 100px;/* Center the icons horizontally */
+  gap: 15px;  /* Space between the icons */
+  margin-bottom: 10px;  /* Space between icons and the "Contact Us" text */
+}
+
+.social-icon-img {
+  width: 30px;  /* Set the size of the icons */
+  height: 30px;
+  transition: transform 0.3s ease;  /* Optional: add a hover effect */
+}
+
+.social-icon-img:hover {
+  transform: scale(1.1);  /* Slightly increase icon size on hover */
+}
+
+/* The text below the icons */
+.Class-text {
+  font-size: 16px;  
+  color: white;  
+  margin-top: 10px;  
+  width: 100%; 
+  
+  margin-left: 1340px; /* Adds some space from the right edge (adjust as needed) */
+}
+
+/* Container for the logo */
+/* Container for KJSCE Logo and Text */
+.kjscelogo-container {
+  display: flex;              /* Enable flexbox layout */
+  flex-direction: column;     /* Stack logo and text vertically */
+  align-items: center;        /* Center align items horizontally */
+  justify-content: center;    /* Center align items vertically */
+  text-align: center;         /* Center text horizontally */
+  margin-top: 50px;           /* Adjust vertical position */
+  margin-bottom: 20px;        /* Add spacing below */
+}
+
+/* Styling for KJSCE Logo */
+.kjscelogo {
+  width: 200px;              /* Adjust the width of the logo */
+  height: auto;              /* Maintain aspect ratio */
+  display: block;            /* Treat logo as a block element */
+  margin-bottom: 10px;       /* Add spacing between logo and text */
+}
+
+/* Styling for KJ Somaiya College of Engineering Text */
+.kjscelogo-text {
+  font-size: 18px;           /* Adjust font size */
+  font-weight: bold;         /* Make text bold */
+  color: white;              /* Text color */
+}
+.kjscelogo-write{
+  font-size: 10px;
+  font-weight:bold;
+  color:white;
+}

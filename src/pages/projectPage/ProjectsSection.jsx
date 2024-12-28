@@ -1,9 +1,15 @@
 import React from 'react';
 import "./ProjectsSection.css";
+import bgVideo from '../../assets/themePage/videoBg.mp4'
 
 const ProjectsSection = () => {
   return (
-    <>
+  <>
+    <div className="video-container">
+      <video autoPlay muted loop className="bg-video">
+        <source src={bgVideo} type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
       {/* Projects Section */}
       <div className="projects-section">
         <div className="projects-content">
@@ -24,7 +30,6 @@ const ProjectsSection = () => {
           </div>
         </div>
       </div>
-
       {/* Prizes Section */}
       <div className="prizes-section">
         <h2 className="section-title-prize">Prizes</h2>
@@ -47,14 +52,13 @@ const ProjectsSection = () => {
           </div>
         </div>
       </div>
-
       {/* Additional Information */}
       <div className="additional-info">
         <p>• Participation certificate for all participants</p>
         <p>• Consolation prizes may be awarded based on recommendations from judges. Decision of judges will be binding on participants.</p>
       </div>
-    </>
+    </div>
+  </>
   );
 };
-
 export default ProjectsSection;
