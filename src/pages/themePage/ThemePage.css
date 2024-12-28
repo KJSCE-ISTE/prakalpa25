@@ -19,47 +19,53 @@ body {
 }
 
 @keyframes color-change {
-  0% { color: #ff7f50; }
-  25% { color: #ff6347; }
-  50% { color: #ff4500; }
-  75% { color: #ff1493; }
-  100% { color: #ff69b4; }
+  0% { color: #ffffff; text-shadow: 0 0 5px rgba(255, 238, 175, 0.3), 0 0 10px rgba(255, 238, 175, 0.4), 0 0 15px rgba(255, 238, 175, 0.5), 0 0 20px rgba(255, 238, 175, 0.4), 0 0 25px rgba(255, 238, 175, 0.3); }
+  25% { color: #f8f8f8; text-shadow: 0 0 5px rgba(255, 238, 175, 0.3), 0 0 10px rgba(255, 238, 175, 0.4), 0 0 15px rgba(255, 238, 175, 0.5), 0 0 20px rgba(255, 238, 175, 0.4), 0 0 25px rgba(255, 238, 175, 0.3); }
+  50% { color: #f0f0f0; text-shadow: 0 0 5px rgba(255, 238, 175, 0.3), 0 0 10px rgba(255, 238, 175, 0.4), 0 0 15px rgba(255, 238, 175, 0.5), 0 0 20px rgba(255, 238, 175, 0.4), 0 0 25px rgba(255, 238, 175, 0.3); }
+  75% { color: #e8e8e8; text-shadow: 0 0 5px rgba(255, 238, 175, 0.3), 0 0 10px rgba(255, 238, 175, 0.4), 0 0 15px rgba(255, 238, 175, 0.5), 0 0 20px rgba(255, 238, 175, 0.4), 0 0 25px rgba(255, 238, 175, 0.3); }
+  100% { color: #e0e0e0; text-shadow: 0 0 5px rgba(255, 238, 175, 0.3), 0 0 10px rgba(255, 238, 175, 0.4), 0 0 15px rgba(255, 238, 175, 0.5), 0 0 20px rgba(255, 238, 175, 0.4), 0 0 25px rgba(255, 238, 175, 0.3); }
 }
 
 .card-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center; 
-  gap: 20px; /* Adjust spacing between cards */
+  gap: 10px; /* Small gap for compact layout */
   margin-bottom: 0; /* Remove unnecessary white space */
+  z-index: 1; /* Ensure cards are above the background */
+  align-items: flex-start; /* Align cards to the top */
 }
 
 .card {
-  width: 250px;
+  width: 100px; /* Core card size settings */
+  height: 130px; /* Core card size settings */
   border: 1px solid #ddd;
-  border-radius: 8px;
+  border-radius: 6px; /* Slightly reduced border radius */
   background: white;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 0 10px rgba(255, 255, 255, 0.2); /* Added glow effect */
   text-align: center;
   overflow: hidden;
   transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.5s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .card:hover {
   transform: scale(1.05);
-  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2), 0 0 15px rgba(255, 255, 255, 0.3); /* Enhanced glow effect on hover */
   background-color: #f0f8ff;
 }
 
 .card img {
-  width: 100%;
+  width: 50%; /* Proportional image size */
   height: auto;
 }
 
 .card-title {
-  font-size: 1.2em;
+  font-size: 0.9em; /* Adjusted for small card */
   font-weight: bold;
-  margin: 15px 0;
+  margin: 8px 0; /* Adjusted for small card */
   color: #333;
   transition: color 0.5s ease;
 }
@@ -69,10 +75,13 @@ body {
 }
 
 .card-description {
-  font-size: 0.9em;
-  padding: 0 15px 15px;
+  font-size: 0.7em; /* Adjusted for small card */
+  padding: 0 5px 5px; /* Adjusted for small card */
   color: #666;
   transition: color 0.5s ease;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap; /* Shorten description text */
 }
 
 .card:hover .card-description {
@@ -119,4 +128,13 @@ body {
   background-image: url('path/to/theme/background.gif'); /* Update path */
   background-size: cover;
   background-position: center;
+}
+
+/* Add media queries to handle mobile view */
+@media screen and (max-width: 768px) {
+  .card {
+    width: 80px; /* Mobile-specific card sizes */
+    height: 110px; /* Mobile-specific card sizes */
+    margin-bottom: 20px; /* Add spacing between cards */
+  }
 }

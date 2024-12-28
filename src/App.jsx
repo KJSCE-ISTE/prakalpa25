@@ -4,6 +4,7 @@ import ThemePage from './pages/themePage/ThemePage';
 import Header from './components/Header';
 import ProjectsSection from './pages/projectPage/ProjectsSection';
 
+
 function App() {
   useEffect(() => {
     const handleClickOutside = (event) => {
