@@ -3,7 +3,11 @@ import LandingPage from './pages/landingPage/LandingPage';
 import ThemePage from './pages/themePage/ThemePage';
 import Header from './components/Header';
 import ProjectsSection from './pages/projectPage/ProjectsSection';
+<<<<<<< HEAD
 import Footer from './components/Footer';
+=======
+import PrizesBg from './pages/prizeBg/PrizesBg';
+>>>>>>> fba6ea917cb3788b69f3600421197e6a63adad4a
 
 function App() {
   useEffect(() => {
@@ -27,7 +31,11 @@ function App() {
       <LandingPage />
       <ThemePage />
       <ProjectsSection />
+<<<<<<< HEAD
       <Footer />
+=======
+      <PrizesBg />
+>>>>>>> fba6ea917cb3788b69f3600421197e6a63adad4a
     </>
   );
 }
