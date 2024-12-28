@@ -1,0 +1,28 @@
+.footer {
+    background-color: rgb(17, 17, 20);
+    color: #fff;
+    padding: 10px 0;
+  }
+  
+  .container {
+    margin-left: 70px;
+    vertical-align: middle;
+    font-family: "Protest Strike", sans-serif;
+    font-size: 2rem;
+  }
+  
+  .link {
+    color: #044484;
+    margin-left: 15px;
+    text-decoration: underline;
+    
+  }
+  .link:hover {
+    color: #970909; /* Change color on hover */
+  }
+.isteLogo {
+  height: 90px;
+  width: auto;
+  margin-left: 100px; 
+  vertical-align: middle;
+}

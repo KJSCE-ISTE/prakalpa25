@@ -3,6 +3,7 @@ import LandingPage from './pages/landingPage/LandingPage';
 import ThemePage from './pages/themePage/ThemePage';
 import Header from './components/Header';
 import ProjectsSection from './pages/projectPage/ProjectsSection';
+import Footer from './components/Footer';
 
 function App() {
   useEffect(() => {
@@ -26,6 +27,7 @@ function App() {
       <LandingPage />
       <ThemePage />
       <ProjectsSection />
+      <Footer />
     </>
   );
 }
