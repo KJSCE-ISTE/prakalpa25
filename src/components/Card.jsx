@@ -1,15 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 import '../styles/Card.css';
 
 function Card({ src, title, description }) {
-  const [flipped, setFlipped] = useState(false);
-
-  const handleFlip = () => {
-    setFlipped(!flipped);
-  };
-
   return (
-    <div className={`card ${flipped ? 'flipped' : ''}`} onClick={handleFlip}>
+    <div className="card">
       <div className="card-inner">
         <div className="card-front">
           <img src={src} alt={title} />
