@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import "../styles/Header.css";
 import isteLogo from "../assets/global/IsteFinal.svg";
 import kjsceLogo from "../assets/global/kjsce_white.svg";
@@ -21,13 +21,20 @@ const Header = () => {
         }
     };
 
+    useEffect(() => {
+        document.addEventListener('mousedown', handleClickOutside);
+        return () => {
+            document.removeEventListener('mousedown', handleClickOutside);
+        };
+    }, [isNavOpen]);
+
     return (
         <>
             <nav ref={navRef} className={`verticalNavBar ${isNavOpen ? 'open' : ''}`}>
-                <h3 className="navBarHome navBarElement">Home</h3>
-                <h3 className="navBarEvents navBarElement">Events</h3>
-                <h3 className="navBarAbout navBarElement">About</h3>
-                <h3 className="navBarContact navBarElement">Contact</h3>
+                <h3 className="navBarElement">Home</h3>
+                <h3 className="navBarElement">Events</h3>
+                <h3 className="navBarElement">About</h3>
+                <h3 className="navBarElement">Contact</h3>
             </nav>
             <header className="header">
                 <svg
@@ -48,6 +55,12 @@ const Header = () => {
                         strokeLinejoin="round"
                     />
                 </svg>
+                <div className="horizontalNavBar">
+                    <h3 className="navBarElement">Home</h3>
+                    <h3 className="navBarElement">Events</h3>
+                    <h3 className="navBarElement">About</h3>
+                    <h3 className="navBarElement">Contact</h3>
+                </div>
                 <div className="headerLogos">
                     <a href="https://kjsce.somaiya.edu">
                         <img
