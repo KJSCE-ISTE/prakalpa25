@@ -8,7 +8,7 @@ import ProjectsSection from './pages/projectPage/ProjectsSection';
 
 import Footer from './components/Footer';
 
-import PrizesBg from './pages/prizeBg/PrizesBg';
+
 
 function App() {
   useEffect(() => {
@@ -32,7 +32,7 @@ function App() {
       <LandingPage />
       <ThemePage />
       <ProjectsSection />
-      <PrizesBg />
+      
       <Footer />
     </>
   );

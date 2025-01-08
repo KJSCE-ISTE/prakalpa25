@@ -7,10 +7,10 @@ function Card({ src, title, description }) {
       <div className="card-inner">
         <div className="card-front">
           <img src={src} alt={title} />
-          <h2>{title}</h2>
+          <h2 className="title">{title}</h2>
         </div>
         <div className="card-back">
-          <p>{description}</p>
+          <p className="description">{description}</p>
         </div>
       </div>
     </div>
