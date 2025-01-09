@@ -21,8 +21,7 @@ const ThemePage = () => {
       <div className="theme-page-bg">
         <div className="layout">
           <h1 className='themes'>Themes for the Event</h1>
-          <div className="card-container">
-            {cards.map((card, index) => (
+          <div className="card-container">{cards.map((card, index) => (
               <div key={index} className="card" style={{ background: `url(${card.src}) center/cover no-repeat` }}>
                 <div className="card-content">
                   <h2>{card.title}</h2>
@@ -43,7 +42,7 @@ function refreshCards() {
 
 
 
-  
+
   const cards = document.querySelectorAll(".card");
   cards.forEach((card, index) => {
     card.style.animation = "none";
