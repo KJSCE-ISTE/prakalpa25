@@ -39,6 +39,11 @@ const ThemePage = () => {
 }
 
 function refreshCards() {
+
+
+
+
+  
   const cards = document.querySelectorAll(".card");
   cards.forEach((card, index) => {
     card.style.animation = "none";
