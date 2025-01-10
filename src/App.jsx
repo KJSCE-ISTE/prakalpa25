@@ -31,9 +31,8 @@ function App() {
       <Header />
       <LandingPage />
       <ThemePage />
-      <ProjectsSection />
-      
-      <Footer />
+      {/* <ProjectsSection />
+      <Footer /> */}
     </>
   );
 }

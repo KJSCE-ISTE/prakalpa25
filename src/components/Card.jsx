@@ -1,20 +1,32 @@
-import React from 'react';
-import '../styles/Card.css';
+import React, { useState } from 'react';
+import "../styles/Card.css";
 
 function Card({ src, title, description }) {
+  const [isHovered, setIsHovered] = useState(false);
+
   return (
-    <div className="card">
-      <div className="card-inner">
-        <div className="card-front">
-          <img src={src} alt={title} />
-          <h2 className="title">{title}</h2>
-        </div>
-        <div className="card-back">
-          <p className="description">{description}</p>
+    <div
+      className="individualThemeCard"
+      style={{
+        backgroundImage: `url(${src})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+      }}
+      onMouseOver={() => {
+        console.log("hovered");
+        setIsHovered(true);
+      }}
+      onMouseOut={() => setIsHovered(false)}
+    >
+      <div className={`titleAndDescription ${isHovered ? 'hovered' : ''}`}>
+        <div className="bottomTitleBarForThemeCard">{title}</div>
+        <div className="descriptionForThemeCardContainer">
+          <p>{description}</p>
         </div>
       </div>
-    </div>
+    </div >
   );
 }
 
-export default Card;
+export default Card

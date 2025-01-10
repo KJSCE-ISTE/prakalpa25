@@ -1,13 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
-/* Existing styles from themepage.css */
 .themes-section {
-  background-color: #000; /* Plain black background */
-  padding: 50px 20px; /* Add spacing around the section */
+  background-color: #000;
 }
 
 .themes {
@@ -19,195 +17,65 @@ body {
 }
 
 @keyframes color-change {
-  0% { color: #ff7f50; }
-  25% { color: #ff6347; }
-  50% { color: #ff4500; }
-  75% { color: #ff1493; }
-  100% { color: #ff69b4; }
+  0% {
+    color: #ff7f50;
+  }
+  25% {
+    color: #ff6347;
+  }
+  50% {
+    color: #ff4500;
+  }
+  75% {
+    color: #ff1493;
+  }
+  100% {
+    color: #ff69b4;
+  }
 }
 
 .card-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 1rem;
-  max-width: 1200px;
-  width: 100%;
+  gap: 10px;
+  max-width: 1300px;
   margin: 0 auto;
 }
 
-.card {
-  position: relative;
-  height: 200px;
-  width: 200px;
-  border-radius: 15px;
-  overflow: hidden;
-  opacity: 0;
-  transform: translateY(20px);
-  filter: drop-shadow(1px 2px 1px rgba(255, 255, 255, 0.7)) drop-shadow(2px 4px 3px rgba(255, 255, 255, 0.5));
-  animation: fadeIn 0.6s ease-out forwards;
-}
-
-.card:nth-child(2) {
-  animation-delay: 0.2s;
-}
-.card:nth-child(3) {
-  animation-delay: 0.4s;
-}
-.card:nth-child(4) {
-  animation-delay: 0.6s;
-}
-.card:nth-child(5) {
-  animation-delay: 0.8s;
-}
-.card:nth-child(6) {
-  animation-delay: 1s;
-}
-.card:nth-child(7) {
-  animation-delay: 1.2s;
-}
-.card:nth-child(8) {
-  animation-delay: 1.4s;
-}
-.card:nth-child(9) {
-  animation-delay: 1.6s;
-}
-.card:nth-child(10) {
-  animation-delay: 1.8s;
-}
-
-.card::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.6);
-  z-index: 1;
-  filter: url(#turb);
-}
-
-.card-content {
-  position: relative;
-  z-index: 2;
-  padding: 1rem;
-  color: white;
-  height: 90%;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-}
-
-.card h2 {
-  color: #fff;
-  margin-bottom: 0.5rem;
-  font-size: 1rem;
-  margin-top: 0.5rem;
-}
-
-.card p {
-  color: #f0f0f0;
-  line-height: 1.1;
-  font-size: 0.7rem;
-}
-
-.refresh-btn {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  padding: 10px 20px;
-  background: #007bff;
-  color: white;
-  border: solid 2px black;
-  border-radius: 5px;
-  cursor: pointer;
-  font-family: "Roboto", sans-serif;
-  transition: background 0.3s ease;
-  filter: drop-shadow(1px 2px 1px rgba(255, 255, 255, 0.7)) drop-shadow(2px 4px 3px rgba(255, 255, 255, 0.5));
-}
-
-.refresh-btn:hover {
-  background: #0056b3;
-}
-
-.card:hover {
-  box-shadow: 0 0 25px 5px rgba(255, 255, 255, 0.5);
-}
-
-.card-container:hover > :not(:hover) {
-  filter: url(#colorCycle);
-  transition: filter 0.3s ease, background-color 0.3s ease;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: scale(0.7) translateY(20px) rotateZ(10deg);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1) translateY(0) rotateZ(0);
-  }
-}
-
-.video-container {
-  position: relative;
-  width: 100%;
-  height: 100vh;
-}
-
-.bg-video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  object-fit: cover;
-  z-index: -1;
-}
-
-.layout {
-  position: relative;
-  z-index: 1;
-  padding: 20px;
-  transition: background-image 1s ease-in-out; /* Smooth transition */
-}
-
-.theme-page-bg {
-  background-color: #000000; /* Match the background color of the project section */
-  padding: 0; /* Remove unnecessary padding */
-}
-
-/* Background styles for landing page */
-.landing-background {
-  background-image: url('path/to/landing/background.gif'); /* Update path */
-  background-size: cover;
-  background-position: center;
-}
-
-/* Background styles for theme page */
-.theme-background {
-  background-image: url('path/to/theme/background.gif'); /* Update path */
-  background-size: cover;
-  background-position: center;
-}
-
 @media (max-width: 768px) {
-  .card-container {
-    flex-direction: column;
-    align-items: center;
+  .individualThemeCard {
+    width: 45% !important;
+    margin-top: 0;
+  }
+  .individualThemeCard:nth-child(1) {
+    margin-top: 30px;
+  }
+  .individualThemeCard:nth-child(even) {
+    position: relative;
+    bottom: 30px;
+  }
+  .individualThemeCard:nth-child(2) {
+    position: relative;
+    bottom: 0;
   }
 }
 
-@media (max-width: 480px) {
-  .card-container {
-    flex-direction: column;
-    align-items: center;
+@media (min-width: 769px) {
+  .individualThemeCard {
+    width: 17%;
   }
 
-  .card {
-    width: 100%;
-    margin-bottom: 15px;
+  .individualThemeCard:nth-child(1),
+  .individualThemeCard:nth-child(3),
+  .individualThemeCard:nth-child(5) {
+    margin-top: 40px;
+  }
+
+  .individualThemeCard:nth-child(8),
+  .individualThemeCard:nth-child(10),
+  .individualThemeCard:nth-child(12) {
+    position: relative;
+    bottom: 40px;
   }
 }
