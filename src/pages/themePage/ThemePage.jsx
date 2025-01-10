@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import './ThemePage.css';
 import Card from '../../components/Card';
 
@@ -18,35 +18,6 @@ const cards = [
 ];
 
 const ThemePage = () => {
-  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth <= 768);
-    };
-
-    window.addEventListener('resize', handleResize);
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, []);
-
-  // Dynamically apply margin-top to the first card of each column
-  const getCardStyle = (index) => {
-    let style = {};
-
-    if (!isMobile) {
-      if (index % 2 == 0) {
-        style = { marginTop: '40px' };
-      }
-    } else {
-      if (index == 1) {
-        style = { marginTop: '40px' };
-      }
-    }
-
-    return style;
-  };
 
   return (
     <div className="theme-page-bg">
@@ -54,7 +25,6 @@ const ThemePage = () => {
         <h1 className="themes">Themes for the Event</h1>
         <div className="card-container" >
           {cards.map((card, index) => {
-            const style = getCardStyle(index);
             return (
               <Card
                 className="individualThemeCard"
@@ -62,11 +32,11 @@ const ThemePage = () => {
                 title={card.title}
                 description={card.description}
                 key={index}
-                style={style}
               />
             );
           })}
         </div>
+
       </div>
     </div>
   );
