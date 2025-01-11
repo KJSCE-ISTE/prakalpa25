@@ -7,6 +7,7 @@ import ProjectsSection from './pages/projectPage/ProjectsSection';
 
 
 import Footer from './components/Footer';
+import ParticleBg from './components/Particles';
 
 
 
@@ -28,11 +29,12 @@ function App() {
 
   return (
     <>
+      <ParticleBg />
       <Header />
       <LandingPage />
       <ThemePage />
-      <ProjectsSection />
-      <Footer />
+      {/* <ProjectsSection />
+      <Footer /> */}
     </>
   );
 }

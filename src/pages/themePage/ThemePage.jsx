@@ -20,25 +20,28 @@ const cards = [
 const ThemePage = () => {
 
   return (
-    <div className="theme-page-bg">
-      <div className="layout">
-        <h1 className="themes">Themes for the Event</h1>
-        <div className="card-container" >
-          {cards.map((card, index) => {
-            return (
-              <Card
-                className="individualThemeCard"
-                src={card.src}
-                title={card.title}
-                description={card.description}
-                key={index}
-              />
-            );
-          })}
-        </div>
+    <>
+      <div className="landingAndThemePageDivide" ></div>
+      <div className="theme-page-bg">
+        <div className="layout">
+          <h1 className="themesHeader">Themes for the Event</h1>
+          <div className="card-container" >
+            {cards.map((card, index) => {
+              return (
+                <Card
+                  className="individualThemeCard"
+                  src={card.src}
+                  title={card.title}
+                  description={card.description}
+                  key={index}
+                />
+              );
+            })}
+          </div>
 
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 
