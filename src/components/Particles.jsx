@@ -31,7 +31,7 @@ function ParticleBg() {
                             value: "#0000",
                         },
                     },
-                    fpsLimit: 120,
+                    fpsLimit: 100,
                     interactivity: {
                         events: {
                             onClick: {
