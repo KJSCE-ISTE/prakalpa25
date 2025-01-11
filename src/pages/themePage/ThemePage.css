@@ -59,7 +59,7 @@
   flex-wrap: wrap;
   justify-content: center;
   gap: 10px;
-  max-width: 1300px;
+  max-width: 1100px;
   margin: 0 auto;
 }
 
@@ -83,7 +83,8 @@
 
 @media (min-width: 769px) {
   .individualThemeCard {
-    width: 17%;
+    width: 15% !important;
+    max-height: 250px !important;
   }
 
   .individualThemeCard:nth-child(1),

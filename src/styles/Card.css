@@ -50,3 +50,9 @@
 .descriptionForThemeCardContainer > p {
   text-align: center;
 }
+
+@media (min-width: 768px) {
+  .bottomTitleBarForThemeCard {
+    font-size: 0.95rem;
+  }
+}
