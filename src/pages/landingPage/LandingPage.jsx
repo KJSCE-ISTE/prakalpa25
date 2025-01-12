@@ -7,9 +7,9 @@ const LandingPage = () => {
     return (
         <div className="landingPageContainer">
             <main className="landingPageMain">
-                <video className="videoBackground" autoPlay loop muted poster={firstFrameFallback}>
+                {/* <video className="videoBackground" autoPlay loop muted poster={firstFrameFallback}>
                     <source src={globeWebm} type="video/webm" />
-                </video>
+                </video> */}
                 <h2 className="abovePrakalpaTitle">ISTE KJSCE presents</h2>
                 <h1 className="prakalpaTitle glow-effect">PRAKALPA 25</h1>
                 <h3 className="prakalpaSubtitle">From Blueprint to Breakthrough</h3>
