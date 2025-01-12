@@ -25,13 +25,13 @@ const ThemePage = () => {
       <div className="theme-page-bg">
         <div className="layout">
           <h1 className="themesHeader">Themes for the Event</h1>
-          <div className="card-container" >
+          <div className="card-container glow-effect" >
             {cards.map((card, index) => {
               return (
                 <Card
-                  className="individualThemeCard"
+                  className="individualThemeCard glow-effect"
                   src={card.src}
-                  title={card.title}
+                  title={<span className="glow-effect">{card.title}</span>}
                   description={card.description}
                   key={index}
                 />
