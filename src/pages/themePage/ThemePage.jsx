@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './ThemePage.css';
 import Card from '../../components/Card';
 
@@ -18,31 +18,52 @@ const cards = [
 ];
 
 const ThemePage = () => {
+  const handleScroll = () => {
+    const header = document.querySelector('.themesHeader');
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    const themeSectionOffset = window.innerHeight;
+
+    if (scrollTop <= themeSectionOffset) {
+      const scrollProgress = scrollTop / themeSectionOffset;
+      const translateX = -50 + (50 * scrollProgress);
+      header.style.transform = `translateX(${translateX}%)`;
+    } else {
+      header.style.transform = 'translateX(0%)';
+    }
+  };
+
+  useEffect(() => {
+    const header = document.querySelector('.themesHeader');
+    header.style.transform = 'translateX(-50%)';
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   return (
     <>
-      <div className="landingAndThemePageDivide" ></div>
+      {/* <div className='landingAndThemePageDivide'></div> */}
       <div className="theme-page-bg">
         <div className="layout">
           <h1 className="themesHeader">Themes for the Event</h1>
-          <div className="card-container" >
-            {cards.map((card, index) => {
-              return (
-                <Card
-                  className="individualThemeCard"
-                  src={card.src}
-                  title={card.title}
-                  description={card.description}
-                  key={index}
-                />
-              );
-            })}
+          <div className="card-container">
+            {cards.map((card, index) => (
+              <Card
+                className="individualThemeCard"
+                src={card.src}
+                title={card.title}
+                description={card.description}
+                key={index}
+              />
+            ))}
           </div>
-
         </div>
       </div>
     </>
   );
 };
 
-export default ThemePage
+export default ThemePage;
