@@ -1,15 +1,11 @@
 import React, { useEffect } from 'react';
 import LandingPage from './pages/landingPage/LandingPage';
 import ThemePage from './pages/themePage/ThemePage';
-import Header from './components/Header';
+// import Header from './components/Header';
 import ProjectsSection from './pages/projectPage/ProjectsSection';
-
-
-
 import Footer from './components/Footer';
 import ParticleBg from './components/Particles';
-
-
+import FloatingNavBar from './components/FloatingNavBar';
 
 function App() {
   useEffect(() => {
@@ -30,7 +26,7 @@ function App() {
   return (
     <>
       <ParticleBg />
-      <Header />
+      <FloatingNavBar />
       <LandingPage />
       <ThemePage />
       {/* <ProjectsSection />

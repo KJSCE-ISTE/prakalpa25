@@ -58,3 +58,14 @@
     font-size: 0.95rem;
   }
 }
+
+@media (max-width: 768px) {
+  .individualThemeCard {
+    width: 45% !important;
+    margin-top: 0;
+  }
+
+  .bottomTitleBarForThemeCard {
+    font-size: 1.01rem;
+  }
+}
