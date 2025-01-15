@@ -1,6 +1,8 @@
+// pages/ThemePage.js
 import React, { useEffect } from 'react';
 import './ThemePage.css';
 import Card from '../../components/Card';
+import useSmoothScrollTo from '../../hooks/useSmoothScrollTo';
 
 const cards = [
   { src: "https://github.com/user-attachments/assets/fda3deaf-8d91-414d-9f13-8cb4280b6555", title: "AI/Ml", description: "Generative AI creates new content using advanced machine learning models." },
@@ -18,9 +20,11 @@ const cards = [
 ];
 
 const ThemePage = () => {
+  const themeBind = useSmoothScrollTo('#themes');
+
   const handleScroll = () => {
     const header = document.querySelector('.themesHeader');
-    const threshold = window.innerHeight / 3; // Adjust threshold for better timing
+    const threshold = window.innerHeight / 3;
 
     if (window.scrollY >= threshold) {
       header.style.transform = 'translateX(0%)';
@@ -33,8 +37,8 @@ const ThemePage = () => {
 
   useEffect(() => {
     const header = document.querySelector('.themesHeader');
-    header.style.transform = 'translateX(-100%)'; // Off-screen initially
-    header.style.opacity = '0'; // Hidden initially
+    header.style.transform = 'translateX(-100%)';
+    header.style.opacity = '0';
 
     window.addEventListener('scroll', handleScroll);
     return () => {
@@ -45,7 +49,7 @@ const ThemePage = () => {
   return (
     <>
       <div className='landingAndThemePageDivide'></div>
-      <div className="theme-page-bg">
+      <div className="theme-page-bg" id="themes" {...themeBind}>
         <div className="layout">
           <h1 className="themesHeader">Themes for the Event</h1>
           <div className="card-container">

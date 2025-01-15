@@ -1,3 +1,4 @@
+// components/FloatingNavBar.js
 import React, { useState, useEffect } from 'react';
 import "../styles/FloatingNavBar.css";
 
@@ -7,11 +8,7 @@ const FloatingNavBar = () => {
 
     const handleScroll = () => {
         const currentScrollY = window.scrollY;
-        if (currentScrollY > lastScrollY) {
-            setShowNavBar(false);
-        } else {
-            setShowNavBar(true);
-        }
+        setShowNavBar(currentScrollY <= lastScrollY);
         setLastScrollY(currentScrollY);
     };
 
@@ -22,11 +19,11 @@ const FloatingNavBar = () => {
 
     return (
         <div className={`floatingNavBar ${showNavBar ? 'visible' : 'hidden'}`}>
-            <a className='navBarElement' href='#'>Home</a>
-            <a className='navBarElement' href='#'>Themes</a>
-            <a className='navBarElement' href='#'>Prizes</a>
-            <a className='navBarElement' href='#'>Sponsors</a>
-            <a className='navBarElement' href='#'>Register</a>
+            <a className='navBarElement' href='#home'>Home</a>
+            <a className='navBarElement' href='#themes'>Themes</a>
+            <a className='navBarElement' href='#prizes'>Prizes</a>
+            <a className='navBarElement' href='#sponsors'>Sponsors</a>
+            <a className='navBarElement' href='#register'>Register</a>
         </div>
     );
 };

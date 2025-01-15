@@ -1,11 +1,15 @@
+// pages/LandingPage.js
 import React from 'react';
 import './LandingPage.css';
 import globeWebm from "../../assets/landingPage/globe.webm";
 import firstFrameFallback from "../../assets/landingPage/firstFrameFallback.png";
+import useSmoothScrollTo from '../../hooks/useSmoothScrollTo';
 
 const LandingPage = () => {
+    const homeBind = useSmoothScrollTo('#home');
+
     return (
-        <div className="landingPageContainer">
+        <div className="landingPageContainer" id="home" {...homeBind}>
             <main className="landingPageMain">
                 <video className="videoBackground" autoPlay loop muted poster={firstFrameFallback}>
                     <source src={globeWebm} type="video/webm" />
