@@ -1,4 +1,3 @@
-// components/FloatingNavBar.js
 import React, { useState, useEffect } from 'react';
 import "../styles/FloatingNavBar.css";
 
