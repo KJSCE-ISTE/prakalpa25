@@ -1,4 +1,3 @@
-// pages/ThemePage.js
 import React, { useEffect } from 'react';
 import './ThemePage.css';
 import Card from '../../components/Card';
@@ -7,7 +6,7 @@ import useSmoothScrollTo from '../../hooks/useSmoothScrollTo';
 const cards = [
   { src: "https://github.com/user-attachments/assets/fda3deaf-8d91-414d-9f13-8cb4280b6555", title: "AI/Ml", description: "Generative AI creates new content using advanced machine learning models." },
   { src: "https://github.com/user-attachments/assets/ed3a421d-0556-4064-a60c-75cda82f86b7", title: "Game Development", description: "Designing, creating, and programming interactive video games." },
-  { src: "https://github.com/user-attachments/assets/0b41654d-2d95-4121-85a3-0b0acd5fd788", title: "Blockchain", description: "Digital currency using cryptographic techniques for secure transactions." },
+  { src: "https://github.com/user-attachments/assets/0b41654d-2d95-4121-85a3-0b0acd5fd788", title: "Blockchain", description: "Decentralized technology enabling secure digital transactions and Web3 applications." },
   { src: "https://github.com/user-attachments/assets/6b764909-3b9d-4663-897c-3977f20bc585", title: "Cybersecurity", description: "Protecting computer systems, networks, and data from cyberattacks." },
   { src: "https://github.com/user-attachments/assets/f804cb7f-2ab1-4c92-a629-6234a975d6b8", title: "Cloud Computing", description: "On-demand computing resources over the internet." },
   { src: "https://github.com/user-attachments/assets/ac7fbd65-6e7e-40b0-b70a-32d64f617349", title: "Autonomous Vehicles", description: "Self-driving vehicles equipped with sensors and AI." },
