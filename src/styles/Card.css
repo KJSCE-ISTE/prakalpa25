@@ -46,7 +46,7 @@
   color: white;
   flex-grow: 1;
   backdrop-filter: blur(5px);
-  font-size: 0.9rem;
+  font-size: 0.85rem;
 }
 
 .descriptionForThemeCardContainer > p {
