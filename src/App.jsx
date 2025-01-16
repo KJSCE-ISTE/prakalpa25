@@ -29,7 +29,7 @@ function App() {
       <FloatingNavBar />
       <LandingPage />
       <ThemePage />
-      {/* <ProjectsSection />
+        {/* <ProjectsSection />
       <Footer /> */}
     </>
   );
