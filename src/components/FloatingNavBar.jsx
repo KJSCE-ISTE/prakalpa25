@@ -12,20 +12,18 @@ const FloatingNavBar = () => {
     const handleScroll = () => {
         const currentScrollY = window.scrollY;
 
-        // If we've scrolled down, hide the navbar
         if (currentScrollY > lastScrollY) {
-            setShowNavBar(false); // Hide navbar
+            setShowNavBar(false);
         } else {
             if (logosBarGone) {
-                setShowNavBar(true); // Show navbar only if logos bar is gone
+                setShowNavBar(true);
             }
         }
 
         setLastScrollY(currentScrollY);
 
-        // Hide logos bar after the first scroll
         if (!hasScrolledYet && currentScrollY > 0) {
-            setLogosBarGone(true); // Logos bar goes up
+            setLogosBarGone(true);
             setHasScrolledYet(true);
         }
     };
