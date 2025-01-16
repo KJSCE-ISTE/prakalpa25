@@ -1,6 +1,33 @@
+.logosNavBar {
+  display: flex;
+  height: 11%;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #18181b;
+  z-index: 3;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.logoImage {
+  height: 90%;
+  width: auto;
+}
+
+.logoImage:nth-child(1) {
+  margin-left: 15px;
+}
+
+.logoImage:nth-child(2) {
+  margin-right: 15px;
+}
+
 .floatingNavBar {
   height: 10%;
-  width: 50%;
   width: fit-content;
   background-color: #18181b;
   position: fixed;
@@ -12,14 +39,14 @@
   justify-content: flex-start;
   align-items: center;
   gap: 5px;
-  margin: 0%;
-  padding: 0%;
+  margin: 0;
+  padding: 0;
   z-index: 4;
   padding-left: 20px;
   padding-right: 20px;
   border-radius: 40px;
   border: 1px solid #262c2c;
-  transition: transform 0.3s ease, opacity 0.3s ease;
+  transition: transform 0.3s ease, opacity 0.5s ease;
 }
 
 .floatingNavBar.visible {
@@ -28,6 +55,11 @@
 }
 
 .floatingNavBar.hidden {
+  transform: translateX(-50%) translateY(-100%);
+  opacity: 0;
+}
+
+.logosNavBar.hidden {
   transform: translateX(-50%) translateY(-100%);
   opacity: 0;
 }
@@ -43,16 +75,8 @@
   cursor: pointer !important;
   padding: 0.5rem 0.7rem;
   user-select: none;
-}
-
-.navBarElement {
+  outline: none;
   -webkit-tap-highlight-color: transparent;
-  outline: none;
-}
-
-.navBarElement:focus {
-  outline: none;
-  box-shadow: none;
 }
 
 .navBarElement:hover {
@@ -62,14 +86,25 @@
 }
 
 @media (max-width: 768px) {
+  .logosNavBar {
+    height: 9%;
+  }
+
+  .logoImage:nth-child(1) {
+    margin-left: 5px;
+  }
+
+  .logoImage:nth-child(2) {
+    margin-right: 5px;
+  }
+
   .floatingNavBar {
     width: 93%;
     gap: 2px;
-    padding: 0%;
-    height: 8%;
+    padding: 0;
+    height: 7%;
     padding-left: 1px;
     padding-right: 5px;
-    height: 7%;
   }
 
   .navBarElement {

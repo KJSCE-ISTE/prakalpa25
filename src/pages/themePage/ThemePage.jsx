@@ -54,7 +54,7 @@ const ThemePage = () => {
           <div className="card-container">
             {cards.map((card, index) => (
               <Card
-                className="individualThemeCard glow-effect glow-border"
+                className="individualThemeCard glow-border"
                 src={card.src}
                 title={<span className="glow-effect">{card.title}</span>}
                 description={card.description}

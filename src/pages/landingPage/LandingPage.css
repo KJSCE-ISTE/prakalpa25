@@ -31,7 +31,7 @@
   padding: 0;
 }
 
-.glow-effect {
+.glow-effectForTitle {
   color: white;
   text-shadow: 0 0 5px rgba(255, 238, 175, 0.3),
     0 0 10px rgba(255, 238, 175, 0.4), 0 0 15px rgba(255, 238, 175, 0.5),

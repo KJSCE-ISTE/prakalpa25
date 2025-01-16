@@ -1,33 +1,56 @@
 import React, { useState, useEffect } from 'react';
 import "../styles/FloatingNavBar.css";
+import kjsceLogo from "../assets/global/kjsce_white.svg";
+import isteLogo from "../assets/global/IsteFinal.svg";
 
 const FloatingNavBar = () => {
-    const [showNavBar, setShowNavBar] = useState(true);
+    const [showNavBar, setShowNavBar] = useState(false);
     const [lastScrollY, setLastScrollY] = useState(0);
+    const [hasScrolledYet, setHasScrolledYet] = useState(false);
+    const [logosBarGone, setLogosBarGone] = useState(false);
 
     const handleScroll = () => {
         const currentScrollY = window.scrollY;
+
+        // If we've scrolled down, hide the navbar
         if (currentScrollY > lastScrollY) {
-            setShowNavBar(false);
+            setShowNavBar(false); // Hide navbar
         } else {
-            setShowNavBar(true);
+            if (logosBarGone) {
+                setShowNavBar(true); // Show navbar only if logos bar is gone
+            }
         }
+
         setLastScrollY(currentScrollY);
+
+        // Hide logos bar after the first scroll
+        if (!hasScrolledYet && currentScrollY > 0) {
+            setLogosBarGone(true); // Logos bar goes up
+            setHasScrolledYet(true);
+        }
     };
 
     useEffect(() => {
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
-    }, [lastScrollY]);
+    }, [lastScrollY, hasScrolledYet]);
 
     return (
-        <div className={`floatingNavBar ${showNavBar ? 'visible' : 'hidden'}`}>
-            <a className='navBarElement' href='#home'>Home</a>
-            <a className='navBarElement' href='#themes'>Themes</a>
-            <a className='navBarElement' href='#prizes'>Prizes</a>
-            <a className='navBarElement' href='#sponsors'>Sponsors</a>
-            <a className='navBarElement' href='#register'>Register</a>
-        </div>
+        <>
+            <div className={`logosNavBar ${logosBarGone ? 'hidden' : ''}`}>
+                <img src={kjsceLogo} className="logoImage" alt="KJSCE Logo" />
+                <img src={isteLogo} className="logoImage" alt="ISTE Logo" />
+            </div>
+            {logosBarGone && (
+                <div className={`floatingNavBar ${showNavBar ? 'visible' : 'hidden'}`}>
+                    <a className="navBarElement" href="#home">Home</a>
+                    <a className="navBarElement" href="#themes">Themes</a>
+                    <a className="navBarElement" href="#prizes">Prizes</a>
+                    <a className="navBarElement" href="#sponsors">Sponsors</a>
+                    <a className="navBarElement" href="#register">Register</a>
+                </div>
+            )}
+        </>
     );
 };
 

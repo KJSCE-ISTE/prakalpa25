@@ -53,16 +53,10 @@
   margin-top: 20px;
 }
 
-.glow-effect {
-  color: white;
-  text-shadow: 0 0 5px rgba(255, 238, 175, 0.3),
-    0 0 10px rgba(255, 238, 175, 0.4), 0 0 15px rgba(255, 238, 175, 0.5),
-    0 0 20px rgba(255, 238, 175, 0.4), 0 0 25px rgba(255, 238, 175, 0.3);
-}
-
 .glow-border {
   border: 2px solid #934327;
-  box-shadow: 0 0 5px #934327, 0 0 10px #934327, 0 0 15px #934327, 0 0 20px #934327;
+  box-shadow: 0 0 5px #934327, 0 0 10px #934327, 0 0 15px #934327,
+    0 0 20px #934327;
 }
 
 @media (max-width: 768px) {
@@ -85,6 +79,12 @@
   .themesHeader {
     font-size: 2.6rem;
     font-weight: 550;
+  }
+  .glow-effect {
+    color: white;
+    text-shadow: 0 0 5px rgba(255, 238, 175, 0.3),
+      0 0 10px rgba(255, 238, 175, 0.4), 0 0 15px rgba(255, 238, 175, 0.5),
+      0 0 20px rgba(255, 238, 175, 0.4), 0 0 25px rgba(255, 238, 175, 0.3);
   }
 }
 

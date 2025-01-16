@@ -15,7 +15,7 @@ const LandingPage = () => {
                     <source src={globeWebm} type="video/webm" />
                 </video>
                 <h2 className="abovePrakalpaTitle">ISTE KJSCE presents</h2>
-                <h1 className="prakalpaTitle glow-effect">PRAKALPA 25</h1>
+                <h1 className="prakalpaTitle glow-effectForTitle">PRAKALPA 25</h1>
                 <h3 className="prakalpaSubtitle">From Blueprint to Breakthrough</h3>
             </main>
         </div>
