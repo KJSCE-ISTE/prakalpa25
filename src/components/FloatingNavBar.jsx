@@ -7,7 +7,11 @@ const FloatingNavBar = () => {
 
     const handleScroll = () => {
         const currentScrollY = window.scrollY;
-        setShowNavBar(currentScrollY <= lastScrollY);
+        if (currentScrollY > lastScrollY) {
+            setShowNavBar(false);
+        } else {
+            setShowNavBar(true);
+        }
         setLastScrollY(currentScrollY);
     };
 
