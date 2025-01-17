@@ -1,15 +1,48 @@
 import React from 'react';
 import "./ProjectsSection.css";
-
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const ProjectsSection = () => {
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    pauseOnHover: true,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          initialSlide: 1
+        }
+      }
+    ]
+  };
+
   return (
-  <>
+    <>
       {/* Projects Section */}
-      <div className="projects-section" style={{ backgroundColor: 'black' }}>
+      <div className="projects-section">
         <div className="projects-content">
-          <h2 className="section-title-project">Our Projects</h2>
-          <div className="projects-grid">
+          <h2 className="section-title-project">Project Submission Categories
+          </h2>
+          <Slider {...settings}>
             <div className="project-card">
               <h3>Working Model</h3>
               <p>Explore innovative physical prototypes showcasing cutting-edge solutions.</p>
@@ -22,7 +55,7 @@ const ProjectsSection = () => {
               <h3>Software Competition</h3>
               <p>Compete to develop software solutions to real-world challenges.</p>
             </div>
-          </div>
+          </Slider>
         </div>
       </div>
       {/* Prizes Section */}
@@ -52,8 +85,8 @@ const ProjectsSection = () => {
         <p>• Participation certificate for all participants</p>
         <p>• Consolation prizes may be awarded based on recommendations from judges. Decision of judges will be binding on participants.</p>
       </div>
-    
-  </>
+    </>
   );
 };
+
 export default ProjectsSection;

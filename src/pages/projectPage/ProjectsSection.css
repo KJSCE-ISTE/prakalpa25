@@ -4,14 +4,13 @@ body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
-  font-family: 'Poppins', sans-serif;
-  /* background: #1e1e2f; Match the background color of the theme page */
+  font-family: "Jersey 15", serif;
   color: #ffffff;
 }
 
 /* Projects Section */
 .projects-section {
-  background-color: #000; /* Plain black background */
+  background-color: #000000;
   padding: 50px 20px;
   width: 100%;
   min-height: 100vh; 
@@ -21,17 +20,8 @@ body {
   text-align: center;
 }
 
-/* #canvas-bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1; 
-} */
-
 .projects-content {
-  max-width: 1200px;
+  max-width: 750px;
   margin: 0 auto;
   text-align: center;
   width: 100%;
@@ -39,19 +29,46 @@ body {
 
 .section-title-project {
   font-size: 2.5em;
-  color: #ffffff;
+  color: #FFFFFF;
+  text-shadow: 0 0 5px rgba(204, 201, 190, 0.1),
+    0 0 10px rgba(204, 238, 175, 0.2), 0 0 15px rgba(204, 238, 175, 0.1),
+    0 0 20px rgba(204, 238, 175, 0.2), 0 0 25px rgba(204, 238, 175, 0.1);
   margin-bottom: 40px;
   font-weight: bold;
   animation: fadeIn 2s ease-in-out;
+  font-family: "Jersey 15", serif; 
 }
 
 .section-title-prize {
   font-size: 2.5em;
-  color: #ffffff;
+  color: #FFFFFF;
   margin-bottom: 40px;
   font-weight: bold;
   margin-top: 0rem;
   animation: fadeIn 2s ease-in-out;
+  font-family: "Jersey 15", serif; 
+}
+
+.slick-slider {
+  margin: 0 auto;
+  width: 90%;
+}
+
+.slick-prev, .slick-next {
+  z-index: 1;
+  color: #01A2E3;
+}
+
+.slick-prev:hover, .slick-next:hover {
+  color: #01A2E3;
+}
+
+.slick-dots li button:before {
+  color: #01A2E3;
+}
+
+.slick-dots li.slick-active button:before {
+  color: #01A2E3;
 }
 
 .projects-grid {
@@ -63,37 +80,66 @@ body {
 }
 
 .project-card {
-  background: #1e1e1e;
+  background: linear-gradient(145deg, #152726, #01A2E3);
   color: #ffffff;
   padding: 20px;
-  border-radius: 10px;
-  width: 200px;
+  border-radius: 12px; /* Ensure the same border radius at both ends */
+  width: 100px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s, box-shadow 0.3s;
+  transition: transform 0.3s, box-shadow 0.3s, border 0.3s;
   cursor: pointer;
   animation: slideIn 1s ease-in-out;
   text-align: center;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+  position: relative;
+}
+
+.project-card::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, #01A2E3, #152726);
+  z-index: -1;
+  border-radius: 12px;
+  filter: blur(5px);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.project-card:hover::before {
+  opacity: 1;
 }
 
 .project-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 12px rgba(0, 0, 0, 0.4);
+  border-color: #01A2E3;
+  box-shadow: 0 0 15px #994A1E; /* Add glow effect */
 }
 
 .project-card h3 {
   font-size: 1.5rem;
   margin-bottom: 0.5rem;
-  color: #ffffff;
+  color: #FFFFFF;
+  text-shadow: 0 0 5px rgba(204, 201, 190, 0.3),
+    0 0 10px rgba(204, 238, 175, 0.4), 0 0 15px rgba(204, 238, 175, 0.5),
+    0 0 20px rgba(204, 238, 175, 0.4), 0 0 25px rgba(204, 238, 175, 0.3);
+  font-family: 'Poppins', sans-serif; /* Match font family */
 }
 
 .project-card p {
   font-size: 1rem;
   color: #d1d1d1;
+  font-family: 'Poppins', sans-serif; /* Match font family */
 }
 
 /* Prizes Section */
 .prizes-section {
-  background-color: #000; /* Plain black background */
+  background-color: #152726;
   padding: 50px 20px;
   text-align: center;
   animation: fadeIn 2s ease-in-out;
@@ -102,6 +148,7 @@ body {
 #p {
   color: #f3f3f3;
   font-size: 1rem;
+  font-family: 'Poppins', sans-serif; /* Match font family */
 }
 
 .prizes-grid {
@@ -115,41 +162,74 @@ body {
 }
 
 .prize-card {
-  background: #1e1e1e;
+  background: linear-gradient(145deg, #152726, #01A2E3);
   color: #ffffff;
   padding: 20px;
-  border-radius: 10px;
+  border-radius: 12px; /* Ensure the same border radius at both ends */
   width: 200px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
-  transition: transform 0.3s, box-shadow 0.3s;
+  transition: transform 0.3s, box-shadow 0.3s, border 0.3s;
+  cursor: pointer;
+  animation: slideIn 1s ease-in-out;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+  position: relative;
+}
+
+.prize-card::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, #01A2E3, #152726);
+  z-index: -1;
+  border-radius: 12px;
+  filter: blur(5px);
+  opacity: 0;
+  transition: opacity 0.3s;
+  
+}
+
+.prize-card:hover::before {
+  opacity: 1;
 }
 
 .prize-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 12px rgba(0, 0, 0, 0.4);
+  border-color: #01A2E3;
+  box-shadow: 0 0 15px #994A1E; /* Add glow effect */
 }
 
 .prize-card h3 {
   font-size: 1.5rem;
   margin-bottom: 0.5rem;
-  color: #ffffff;
+  color: #FFFFFF;
+  text-shadow: 0 0 5px rgba(204, 201, 190, 0.3),
+    0 0 10px rgba(204, 238, 175, 0.4), 0 0 15px rgba(204, 238, 175, 0.5),
+    0 0 20px rgba(204, 238, 175, 0.4), 0 0 25px rgba(204, 238, 175, 0.3);
+  font-family: 'Poppins', sans-serif; /* Match font family */
 }
 
 .prize-card p {
   font-size: 1rem;
   color: #d1d1d1;
+  font-family: 'Poppins', sans-serif; /* Match font family */
 }
 
 /* Additional Information */
 .additional-info {
-  background-color: #000; /* Plain black background */
+  background-color: #152726;
   color: #ffffff;
   padding: 20px;
   margin-top: 2rem;
   font-size: 1rem;
   text-align: center;
   animation: fadeIn 2s ease-in-out;
+  font-family: 'Poppins', sans-serif; /* Match font family */
 }
 
 /* Animations */

@@ -25,12 +25,12 @@ function App() {
 
   return (
     <>
-      <ParticleBg />
+      {/* <ParticleBg /> */}
       <FloatingNavBar />
       <LandingPage />
       <ThemePage />
-        {/* <ProjectsSection />
-      <Footer /> */}
+        <ProjectsSection />
+      <Footer />
     </>
   );
 }
