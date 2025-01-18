@@ -13,7 +13,7 @@ body {
   background-color: #000000;
   padding: 50px 20px;
   width: 100%;
-  min-height: 100vh; 
+  min-height: 60vh; 
   display: flex;
   flex-direction: column;
   justify-content: center;
