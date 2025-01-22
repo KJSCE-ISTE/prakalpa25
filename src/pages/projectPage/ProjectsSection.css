@@ -1,19 +1,17 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+ @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 
 body {
   margin: 0;
   padding: 0;
-  overflow-x: hidden;
-  font-family: "Jersey 15", serif;
-  color: #ffffff;
+  font-family: "Poppins", sans-serif;
+  background-color: #000;
+  color: #fff;
 }
 
-/* Projects Section */
 .projects-section {
-  background-color: #000000;
   padding: 50px 20px;
   width: 100%;
-  min-height: 60vh; 
+  min-height: 50vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -21,234 +19,113 @@ body {
 }
 
 .projects-content {
-  max-width: 750px;
+  max-width: 800px;
   margin: 0 auto;
-  text-align: center;
-  width: 100%;
 }
 
 .section-title-project {
   font-size: 2.5em;
-  color: #FFFFFF;
-  text-shadow: 0 0 5px rgba(204, 201, 190, 0.1),
-    0 0 10px rgba(204, 238, 175, 0.2), 0 0 15px rgba(204, 238, 175, 0.1),
-    0 0 20px rgba(204, 238, 175, 0.2), 0 0 25px rgba(204, 238, 175, 0.1);
+  color: #ffffff;
   margin-bottom: 40px;
   font-weight: bold;
-  animation: fadeIn 2s ease-in-out;
-  font-family: "Jersey 15", serif; 
 }
 
-.section-title-prize {
-  font-size: 2.5em;
-  color: #FFFFFF;
-  margin-bottom: 40px;
-  font-weight: bold;
-  margin-top: 0rem;
-  animation: fadeIn 2s ease-in-out;
-  font-family: "Jersey 15", serif; 
-}
-
-.slick-slider {
-  margin: 0 auto;
-  width: 90%;
-}
-
-.slick-prev, .slick-next {
-  z-index: 1;
-  color: #01A2E3;
-}
-
-.slick-prev:hover, .slick-next:hover {
-  color: #01A2E3;
-}
-
-.slick-dots li button:before {
-  color: #01A2E3;
-}
-
-.slick-dots li.slick-active button:before {
-  color: #01A2E3;
-}
-
-.projects-grid {
+/* Card Container */
+.project-cards {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
-  gap: 1rem;
-  padding: 0 1rem;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
+/* Individual Card */
 .project-card {
-  background: linear-gradient(145deg, #152726, #01A2E3);
-  color: #ffffff;
-  padding: 20px;
-  border-radius: 12px; /* Ensure the same border radius at both ends */
-  width: 100px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s, box-shadow 0.3s, border 0.3s;
-  cursor: pointer;
-  animation: slideIn 1s ease-in-out;
-  text-align: center;
-  border: 2px solid transparent;
-  background-clip: padding-box;
+  perspective: 1000px;
+  width: 250px;
+  height: 300px;
+}
+
+.card-inner {
   position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transform: rotateY(0deg);
+  transition: transform 0.8s cubic-bezier(0.4, 0.2, 0.2, 1);
 }
 
-.project-card::before {
-  content: '';
+.project-card:hover .card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Front Face */
+.card-front,
+.card-back {
   position: absolute;
-  top: -2px;
-  left: -2px;
-  right: -2px;
-  bottom: -2px;
-  background: linear-gradient(45deg, #01A2E3, #152726);
-  z-index: -1;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
   border-radius: 12px;
-  filter: blur(5px);
-  opacity: 0;
-  transition: opacity 0.3s;
-}
-
-.project-card:hover::before {
-  opacity: 1;
-}
-
-.project-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.4);
-  border-color: #01A2E3;
-  box-shadow: 0 0 15px #994A1E; /* Add glow effect */
-}
-
-.project-card h3 {
-  font-size: 1.5rem;
-  margin-bottom: 0.5rem;
-  color: #FFFFFF;
-  text-shadow: 0 0 5px rgba(204, 201, 190, 0.3),
-    0 0 10px rgba(204, 238, 175, 0.4), 0 0 15px rgba(204, 238, 175, 0.5),
-    0 0 20px rgba(204, 238, 175, 0.4), 0 0 25px rgba(204, 238, 175, 0.3);
-  font-family: 'Poppins', sans-serif; /* Match font family */
-}
-
-.project-card p {
-  font-size: 1rem;
-  color: #d1d1d1;
-  font-family: 'Poppins', sans-serif; /* Match font family */
-}
-
-/* Prizes Section */
-.prizes-section {
-  background-color: #152726;
-  padding: 50px 20px;
-  text-align: center;
-  animation: fadeIn 2s ease-in-out;
-}
-
-#p {
-  color: #f3f3f3;
-  font-size: 1rem;
-  font-family: 'Poppins', sans-serif; /* Match font family */
-}
-
-.prizes-grid {
+  overflow: hidden;
   display: flex;
-  flex-wrap: wrap;
+  align-items: center;
   justify-content: center;
-  gap: 1rem;
-  margin-top: 1.5rem;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.prize-card {
-  background: linear-gradient(145deg, #152726, #01A2E3);
-  color: #ffffff;
-  padding: 20px;
-  border-radius: 12px; /* Ensure the same border radius at both ends */
-  width: 200px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  flex-direction: column;
   text-align: center;
-  transition: transform 0.3s, box-shadow 0.3s, border 0.3s;
-  cursor: pointer;
-  animation: slideIn 1s ease-in-out;
-  border: 2px solid transparent;
-  background-clip: padding-box;
-  position: relative;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.prize-card::before {
-  content: '';
-  position: absolute;
-  top: -2px;
-  left: -2px;
-  right: -2px;
-  bottom: -2px;
-  background: linear-gradient(45deg, #01A2E3, #152726);
-  z-index: -1;
-  border-radius: 12px;
-  filter: blur(5px);
-  opacity: 0;
-  transition: opacity 0.3s;
-  
+.card-front {
+  background: linear-gradient(135deg, #3e4c59, #20232a);
+  color: #ffffff;
 }
 
-.prize-card:hover::before {
-  opacity: 1;
-}
-
-.prize-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.4);
-  border-color: #01A2E3;
-  box-shadow: 0 0 15px #994A1E; /* Add glow effect */
-}
-
-.prize-card h3 {
+.card-front h3 {
   font-size: 1.5rem;
   margin-bottom: 0.5rem;
-  color: #FFFFFF;
-  text-shadow: 0 0 5px rgba(204, 201, 190, 0.3),
-    0 0 10px rgba(204, 238, 175, 0.4), 0 0 15px rgba(204, 238, 175, 0.5),
-    0 0 20px rgba(204, 238, 175, 0.4), 0 0 25px rgba(204, 238, 175, 0.3);
-  font-family: 'Poppins', sans-serif; /* Match font family */
 }
 
-.prize-card p {
-  font-size: 1rem;
-  color: #d1d1d1;
-  font-family: 'Poppins', sans-serif; /* Match font family */
+.card-front p {
+  font-size: 1.1rem;
+  color: #f0db4f;
+  font-weight: bold;
 }
 
-/* Additional Information */
-.additional-info {
-  background-color: #152726;
+/* Back Face */
+.card-back {
+  background: linear-gradient(135deg, #20232a, #61dafb);
   color: #ffffff;
-  padding: 20px;
-  margin-top: 2rem;
+  transform: rotateY(180deg);
+}
+
+.card-back h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.card-back p {
   font-size: 1rem;
-  text-align: center;
-  animation: fadeIn 2s ease-in-out;
-  font-family: 'Poppins', sans-serif; /* Match font family */
+  padding: 0 10px;
 }
 
-/* Animations */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .project-cards {
+    gap: 15px;
   }
-  to {
-    opacity: 1;
-  }
-}
 
-@keyframes slideIn {
-  from {
-    transform: translateY(20px);
-    opacity: 0;
+  .project-card {
+    width: 200px;
+    height: 260px;
   }
-  to {
-    transform: translateY(0);
-    opacity: 1;
+
+  .card-front h3,
+  .card-back h3 {
+    font-size: 1.3rem;
   }
-}
+
+  .card-front p,
+  .card-back p {
+    font-size: 0.9rem;
+  }
+} 
