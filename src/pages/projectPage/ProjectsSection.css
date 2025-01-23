@@ -29,6 +29,8 @@ body {
   color: #ffffff;
   margin-bottom: 40px;
   font-weight: bold;
+  /* z-index: 3; */
+  position: relative;
 }
 
 /* Card Container */

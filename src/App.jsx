@@ -25,7 +25,7 @@ function App() {
 
   return (
     <>
-      {/* <ParticleBg /> */}
+      <ParticleBg />
       <FloatingNavBar />
       <LandingPage />
       <ThemePage />
