@@ -29,6 +29,7 @@
   justify-content: center;
   gap: 15px;
 }
+
 .social-icon-img {
   width: 30px;
   height: 30px;
@@ -36,6 +37,7 @@
   transition: transform 0.3s ease;
   margin-right: 50px;
 }
+
 .Kjscelogo-write {
   font-size: 12px;
 }
@@ -57,13 +59,48 @@
   height: 90px;
   width: auto;
 }
+
 .logo-subtext {
   color: lightblue;
-
   margin-top: 5px;
   margin-left: 10px;
 }
 
 .logo-subtext:hover {
   color: darkblue;
+}
+
+/* Media Query for Mobile Phones */
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: column; /* Stack items vertically */
+    padding: 15px;
+  }
+
+  .kjscelogo-container,
+  .logo-container {
+    margin-bottom: 10px; /* Add spacing between sections */
+  }
+
+  .social-links {
+    margin: 10px 0;
+  }
+
+  .social-icon-img {
+    margin-right: 0; /* Remove extra margin */
+  }
+
+  .Class-text {
+    margin-right: 0; /* Prevent text overflow */
+    text-align: center;
+  }
+
+  .isteLogo,
+  .kjscelogo {
+    height: 60px; /* Scale down logos */
+  }
+
+  .logo-subtext {
+    text-align: center;
+  }
 }
