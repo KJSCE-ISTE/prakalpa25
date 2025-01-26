@@ -8,6 +8,10 @@
   position: relative;
 }
 
+html {
+  overflow-x: hidden; /* Ensures no horizontal scroll on the entire page */
+}
+
 .kjscelogo-container {
   text-align: center;
 }
