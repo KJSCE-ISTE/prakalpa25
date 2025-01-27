@@ -62,6 +62,7 @@ body {
 
 .project-card:hover .card-inner {
   transform: rotateY(180deg);
+  cursor: pointer;
 }
 
 /* Front Face */
