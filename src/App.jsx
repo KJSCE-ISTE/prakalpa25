@@ -6,6 +6,7 @@ import ProjectsSection from './pages/projectPage/ProjectsSection';
 import Footer from './components/Footer';
 import ParticleBg from './components/Particles';
 import FloatingNavBar from './components/FloatingNavBar';
+import RegistrationPage from './pages/registrationPage/registrationPage';
 
 function App() {
   useEffect(() => {
@@ -30,6 +31,7 @@ function App() {
       <LandingPage />
       <ThemePage />
       <ProjectsSection />
+      <RegistrationPage />
       <Footer />
     </>
   );
