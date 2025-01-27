@@ -21,6 +21,7 @@ const cards = [
 const ThemePage = () => {
   const themeBind = useSmoothScrollTo('#themes');
 
+
   const handleScroll = () => {
     const header = document.querySelector('.themesHeader');
     const threshold = window.innerHeight / 3;
