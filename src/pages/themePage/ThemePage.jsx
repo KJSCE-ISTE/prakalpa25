@@ -14,7 +14,7 @@ const cards = [
   { src: "https://github.com/user-attachments/assets/636cd18b-af68-42c4-9b58-046d1d7266d9", title: "Robotics", description: "Designing and programming robots to perform tasks autonomously." },
   { src: "https://github.com/user-attachments/assets/00c25f1f-b89e-4fe3-97e0-457d731b3fbb", title: "Internet of Things", description: "Connecting physical devices to the internet for data sharing." },
   { src: "https://github.com/user-attachments/assets/2789afea-9167-46b1-9c74-dea1f3fd8bd2", title: "Renewable Energy", description: "Harnessing natural resources for sustainable and clean energy." },
-  { src: "https://github.com/user-attachments/assets/ecd5d48e-573c-4a2d-aa79-a419d3c67a3f", title: "Biotecnology", description: "Using biological systems and organisms to develop new products." },
+  { src: "https://github.com/user-attachments/assets/ecd5d48e-573c-4a2d-aa79-a419d3c67a3f", title: "Biotechnology", description: "Using biological systems and organisms to develop new products." },
   { src: "https://github.com/user-attachments/assets/ddf9e287-aa40-4333-bd8c-51e2c264a924", title: "Agrotech", description: "Innovations in agriculture to improve farming practices and food production." },
 ];
 
