@@ -47,6 +47,7 @@ const FloatingNavBar = () => {
                     {/* <a className="navBarElement" href="#sponsors">Sponsors</a> */}
                     <a className="navBarElement" href="#register">Register</a>
                 </div>
+                
             )}
         </>
     );
