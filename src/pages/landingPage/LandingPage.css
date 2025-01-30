@@ -46,6 +46,15 @@
   margin: 0;
   padding: 0;
 }
+.prakalpaSubtxt
+{
+  font-family: "Protest Strike", sans-serif;
+  font-size: 1.6rem;
+  color: whitesmoke;
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
 
 .abovePrakalpaTitle {
   font-family: "Protest Strike", sans-serif;
@@ -89,6 +98,10 @@
   .prakalpaSubtitle {
     font-size: 1.5rem;
   }
+  .prakalpaSubtxt
+  {
+    font-size: 1.3rem;
+  }
 
   .abovePrakalpaTitle {
     font-size: 1.8rem;
@@ -116,6 +129,13 @@
 
   .prakalpaSubtitle {
     font-size: 1.4rem;
+  }
+  .prakalpaSubtxt
+  {
+    text-align: center;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-size: 1.2rem;
   }
 
   .abovePrakalpaTitle {

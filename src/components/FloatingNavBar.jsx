@@ -44,13 +44,12 @@ const FloatingNavBar = () => {
                     <a className="navBarElement" href="#home">Home</a>
                     <a className="navBarElement" href="#themes">Themes</a>
                     <a className="navBarElement" href="#prizes">Prizes</a>
-                    {/* <a className="navBarElement" href="#sponsors">Sponsors</a> */}
                     <a className="navBarElement" href="#register">Register</a>
                 </div>
-                
             )}
         </>
     );
 };
 
 export default FloatingNavBar;
+
