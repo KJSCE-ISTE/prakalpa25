@@ -8,18 +8,21 @@ const ProjectsSection = () => {
       description:
         "Explore innovative physical prototypes showcasing cutting-edge solutions.",
       prize: "1st Prize: Rs. 10,000/-",
+      prize2:"2nd Prize: Rs.5,000/-",
     },
     {
       title: "Software Competition",
       description:
         "Compete to develop software solutions to real-world challenges.",
       prize: "1st Prize: Rs. 8,000/-",
+      prize2:"2nd Prize: Rs.4,000/-",
     },
     {
       title: "Paper Presentation",
       description:
         "Showcase your research and ideas with well-crafted technical papers.",
       prize: "1st Prize: Rs. 7,000/-",
+      prize2:"2nd Prize: Rs.3,500/-",
     },
   ];
 
@@ -34,6 +37,7 @@ const ProjectsSection = () => {
                 <div className="card-front">
                   <h3>{item.title}</h3>
                   <p>{item.prize}</p>
+                  <p>{item.prize2}</p>
                 </div>
                 <div className="card-back">
                   <h3>{item.title}</h3>

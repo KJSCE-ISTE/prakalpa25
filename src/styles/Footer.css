@@ -68,10 +68,11 @@ html {
   color: lightblue;
   margin-top: 5px;
   margin-left: 10px;
+  text-decoration: none;
 }
 
 .logo-subtext:hover {
-  color: darkblue;
+  color: rgb(253, 253, 73);
 }
 
 /* Media Query for Mobile Phones */

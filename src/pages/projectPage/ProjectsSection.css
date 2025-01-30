@@ -96,6 +96,7 @@ body {
   font-size: 1.1rem;
   color: #f0db4f;
   font-weight: bold;
+  margin: 4px 0; /* Reduce spacing */
 }
 
 /* Back Face */
