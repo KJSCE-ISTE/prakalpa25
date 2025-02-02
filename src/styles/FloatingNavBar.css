@@ -29,7 +29,7 @@
 }
 
 .floatingNavBar {
-  height: 10%;
+  height: 7%;
   width: fit-content;
   background-color: rgba(24, 24, 27, 0.9);
   position: fixed;
@@ -131,7 +131,7 @@
   }
 
   .navBarElement {
-    font-size: 1.1rem;
-    padding: 0.4rem 1rem;
+    font-size: 0.8rem;
+    padding: 0.3rem 0.8rem;
   }
 }

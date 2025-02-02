@@ -27,7 +27,7 @@ const ProjectsSection = () => {
   ];
 
   return (
-    <div className="projects-section">
+    <div id="prizes" className="projects-section">
       <div className="projects-content">
         <h2 className="section-title-project">Project Submission Categories</h2>
         <div className="project-cards">
