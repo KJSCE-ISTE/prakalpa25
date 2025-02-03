@@ -7,6 +7,7 @@ import Footer from './components/Footer';
 import ParticleBg from './components/Particles';
 import FloatingNavBar from './components/FloatingNavBar';
 import { useNavigate } from 'react-router-dom';
+import Register from './components/Register';
 
 function App() {
   useEffect(() => {
@@ -36,10 +37,7 @@ function App() {
       <LandingPage />
       <ThemePage />
       <ProjectsSection />
-      <div className='registerButtonContainer'>
-          <a href="https://docs.google.com/forms/d/e/1FAIpQLScSlgu3YroZbGOMRzWjPBNcuslHPdkq5Hy4YcuTQ3IDcWupHA/viewform"
-          >Register Now</a>
-      </div>
+      <Register />
       <Footer />
     </>
   );
