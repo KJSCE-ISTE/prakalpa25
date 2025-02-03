@@ -4,6 +4,9 @@ import kjsceLogo from "../assets/global/kjsce_white.svg";
 import isteLogo from "../assets/global/IsteFinal.svg";
 
 const FloatingNavBar = () => {
+
+ 
+
     const [showNavBar, setShowNavBar] = useState(false);
     const [lastScrollY, setLastScrollY] = useState(0);
     const [hasScrolledYet, setHasScrolledYet] = useState(false);

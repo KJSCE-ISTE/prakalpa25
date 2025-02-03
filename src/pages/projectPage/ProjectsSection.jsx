@@ -1,7 +1,10 @@
 import React from "react";
 import "./ProjectsSection.css";
+import useSmoothScrollTo from '../../hooks/useSmoothScrollTo';
 
 const ProjectsSection = () => {
+
+     const prizesBind = useSmoothScrollTo('#prizes');
   const combinedData = [
     {
       title: "Working Model",
@@ -27,7 +30,7 @@ const ProjectsSection = () => {
   ];
 
   return (
-    <div id="prizes" className="projects-section">
+    <div id="prizes" className="projects-section" {...prizesBind}>
       <div className="projects-content">
         <h2 className="section-title-project">Project Submission Categories</h2>
         <div className="project-cards">
