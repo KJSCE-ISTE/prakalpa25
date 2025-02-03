@@ -16,8 +16,8 @@ const LandingPage = () => {
                 </video>
                 <h2 className="abovePrakalpaTitle">ISTE KJSCE presents</h2>
                 <h1 className="prakalpaTitle glow-effectForTitle">PRAKALPA '25</h1>
-                <h4 className="prakalpaSubtxt">National Level Working Model Project Competition and paper presentation</h4>
-                <h3 className="prakalpaSubtitle">From Blueprint to Breakthrough</h3>
+                <h4 className="prakalpaSubtxt">National Level Working Model Project Competition and Paper Presentation</h4>
+                <h3 className="prakalpaSubtitle">Innovate to Elevate</h3>
             </main>
         </div>
     );

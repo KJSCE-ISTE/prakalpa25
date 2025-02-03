@@ -6,6 +6,7 @@ import ProjectsSection from './pages/projectPage/ProjectsSection';
 import Footer from './components/Footer';
 import ParticleBg from './components/Particles';
 import FloatingNavBar from './components/FloatingNavBar';
+import { useNavigate } from 'react-router-dom';
 
 function App() {
   useEffect(() => {
@@ -23,6 +24,11 @@ function App() {
     };
   }, []);
 
+  function navToForm(){
+    const nav = useNavigate();
+    nav("/https://docs.google.com/forms/d/e/1FAIpQLScSlgu3YroZbGOMRzWjPBNcuslHPdkq5Hy4YcuTQ3IDcWupHA/viewform")
+  }
+
   return (
     <>
       <ParticleBg />
@@ -30,6 +36,10 @@ function App() {
       <LandingPage />
       <ThemePage />
       <ProjectsSection />
+      <div className='registerButtonContainer'>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLScSlgu3YroZbGOMRzWjPBNcuslHPdkq5Hy4YcuTQ3IDcWupHA/viewform"
+          >Register Now</a>
+      </div>
       <Footer />
     </>
   );
