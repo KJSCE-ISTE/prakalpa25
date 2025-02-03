@@ -104,7 +104,7 @@
 
   .floatingNavBar {
     width: 90%;
-    gap: 5px;
+    gap: 2px;
     padding: 10px;
     height: auto;
     flex-direction: row;
@@ -113,7 +113,7 @@
   }
 
   .navBarElement {
-    font-size: 1.2rem;
+    font-size: 2rem;
     padding: 0.4rem 1rem;
     text-align: center;
   }
@@ -124,7 +124,7 @@
   .floatingNavBar {
     width: 85%;
     height: auto;
-    top: 6%;
+    top: 5%;
     flex-direction: row;
     padding: 10px;
     justify-content: center; /* Extra alignment fix */
