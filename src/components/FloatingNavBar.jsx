@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import "../styles/FloatingNavBar.css";
 import kjsceLogo from "../assets/global/kjsce_white.svg";
 import isteLogo from "../assets/global/IsteFinal.svg";
-import Brochure from "../assets/files/Prakalpa25-Brochure.pdf";
 
 const FloatingNavBar = () => {
 
@@ -48,7 +47,7 @@ const FloatingNavBar = () => {
                     <a className="navBarElement" href="#home">Home</a>
                     <a className="navBarElement" href="#themes">Themes</a>
                     <a className="navBarElement" href="#prizes">Prizes</a>
-                    <a className="navBarElement" href="src/assets/files/Prakalpa25-Brochure.pdf" target="_blank" rel="noreferrer">Brochure</a>
+                    <a className="navBarElement" href="/Prakalpa25-Brochure.pdf" target="_blank" rel="noreferrer">Brochure</a>
                     <a className="navBarElement" href="#register">Register</a>
                 </div>
             )}
