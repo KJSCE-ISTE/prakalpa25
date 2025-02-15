@@ -21,7 +21,6 @@ const cards = [
 const ThemePage = () => {
   const themeBind = useSmoothScrollTo('#themes');
 
-
   const handleScroll = () => {
     const header = document.querySelector('.themesHeader');
     const threshold = window.innerHeight / 3;
@@ -60,6 +59,7 @@ const ThemePage = () => {
                 title={<span className="glow-effect">{card.title}</span>}
                 description={card.description}
                 key={index}
+                onClick={(e) => e.currentTarget.classList.toggle("active")}
               />
             ))}
           </div>
