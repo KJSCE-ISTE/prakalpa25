@@ -6,7 +6,7 @@ const Register = () => {
   return (
     <div className='registerButtonContainer' {...regBind}>
     <a href="https://docs.google.com/forms/d/e/1FAIpQLScSlgu3YroZbGOMRzWjPBNcuslHPdkq5Hy4YcuTQ3IDcWupHA/viewform"
-    >Register Now</a>
+    >Register Here</a>
 </div>
   )
 }
