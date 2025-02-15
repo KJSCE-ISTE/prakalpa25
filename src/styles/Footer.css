@@ -31,7 +31,7 @@ html {
 .social-icons-container {
   display: flex;
   justify-content: center;
-  gap: 15px;
+  gap: 10px;
 }
 
 .social-icon-img {
@@ -39,11 +39,11 @@ html {
   height: 30px;
   object-fit: contain;
   transition: transform 0.3s ease;
-  margin-right: 50px;
+  margin-right: 70px;
 }
 
 .Kjscelogo-write {
-  font-size: 12px;
+  font-size: 10px; /* Reduced font size for desktop view */
 }
 
 .social-icon-img:hover {
@@ -60,7 +60,7 @@ html {
 
 .isteLogo,
 .kjscelogo {
-  height: 90px;
+  height: 70px; /* Decreased vertical height for desktop view */
   width: auto;
 }
 
@@ -102,10 +102,31 @@ html {
 
   .isteLogo,
   .kjscelogo {
-    height: 60px; /* Scale down logos */
+    height: 50px; /* Decreased vertical height for mobile view */
+  }
+  
+  .Kjscelogo-write {
+    font-size: 8px; /* Decreased font size for mobile view */
   }
 
   .logo-subtext {
     text-align: center;
+  }
+}
+
+/* Media Query for Laptop/Desktop Views */
+@media (min-width: 769px) {
+  .footer {
+    /* Increase horizontal padding (distance from the border) */
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+  
+  .social-icons-container {
+    gap: 5px; /* Reduced horizontal gap for social media icons */
+  }
+
+  .social-icon-img {
+    margin-right: 50px; 
   }
 }
