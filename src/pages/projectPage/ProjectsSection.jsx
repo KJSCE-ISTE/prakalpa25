@@ -7,25 +7,25 @@ const ProjectsSection = () => {
      const prizesBind = useSmoothScrollTo('#prizes');
   const combinedData = [
     {
-      title: "Working Model",
+      title: "Hardware Project Presentation",
       description:
         "Explore innovative physical prototypes showcasing cutting-edge solutions.",
-      prize: "1st Prize: Rs. 10,000/-",
-      prize2:"2nd Prize: Rs.5,000/-",
+      prize: "1st Prize: Rs. 10,000*/-",
+      prize2:"2nd Prize: Rs.5,000*/-",
     },
     {
-      title: "Software Competition",
+      title: "Software Project Presentation",
       description:
         "Compete to develop software solutions to real-world challenges.",
-      prize: "1st Prize: Rs. 8,000/-",
-      prize2:"2nd Prize: Rs.4,000/-",
+      prize: "1st Prize: Rs. 8,000*/-",
+      prize2:"2nd Prize: Rs.4,000*/-",
     },
     {
       title: "Paper Presentation",
       description:
         "Showcase your research and ideas with well-crafted technical papers.",
-      prize: "1st Prize: Rs. 7,000/-",
-      prize2:"2nd Prize: Rs.3,500/-",
+      prize: "1st Prize: Rs. 7,000*/-",
+      prize2:"2nd Prize: Rs.3,500*  /-",
     },
   ];
 
