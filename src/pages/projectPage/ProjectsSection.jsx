@@ -7,14 +7,14 @@ const ProjectsSection = () => {
      const prizesBind = useSmoothScrollTo('#prizes');
   const combinedData = [
     {
-      title: "Working Model",
+      title: "Hardware Project",
       description:
         "Explore innovative physical prototypes showcasing cutting-edge solutions.",
       prize: "1st Prize: Rs. 10,000/-",
       prize2:"2nd Prize: Rs.5,000/-",
     },
     {
-      title: "Software Competition",
+      title: "Software Project",
       description:
         "Compete to develop software solutions to real-world challenges.",
       prize: "1st Prize: Rs. 8,000/-",
@@ -50,6 +50,7 @@ const ProjectsSection = () => {
             </div>
           ))}
         </div>
+        <p style={{ position: 'relative', zIndex: 1, fontSize: '1rem', color: 'white' }}>*Subject to change</p> {/* Ensure visibility on top of particles bg and match font */}
       </div>
     </div>
   );
