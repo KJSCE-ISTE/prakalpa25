@@ -38,6 +38,7 @@ const Footer = () => {
 
       {/* Social Media Links */}
       <div className="social-links">
+      <p className='Class-text'>*Subject to change </p>
   <div className="social-icons-container">
     <a
       href="https://www.instagram.com/istekjsce/"

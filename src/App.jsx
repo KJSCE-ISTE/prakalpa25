@@ -8,6 +8,7 @@ import ParticleBg from './components/Particles';
 import FloatingNavBar from './components/FloatingNavBar';
 import { useNavigate } from 'react-router-dom';
 import Register from './components/Register';
+import Timeline from './components/Timeline';
 
 function App() {
   useEffect(() => {
@@ -37,6 +38,7 @@ function App() {
       <LandingPage />
       <ThemePage />
       <ProjectsSection />
+      <Timeline />
       <Register />
       <Footer />
     </>
