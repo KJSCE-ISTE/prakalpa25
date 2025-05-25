@@ -11,27 +11,65 @@ body {
 }
 
 .projects-section {
-  padding: 50px 0;
+  padding: 80px 0;
   width: 100%;
-  min-height: 50vh;
+  min-height: 80vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: center;
+  position: relative;
 }
 
 .projects-content {
-  max-width: 800px;
+  max-width: 1200px;
   margin: 0 auto;
+  position: relative;
+  z-index: 1;
 }
 
 .section-title-project {
   font-size: 3.8rem;
   font-family: "Jersey 15", serif;
   color: #ffffff;
-  margin-bottom: 40px;
+  margin-bottom: 60px;
   font-weight: bold;
   position: relative;
+  background: linear-gradient(135deg, #00d4ff, #ff6b9d, #c471ed, #00d4ff);
+  background-size: 400% 400%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradientShift 4s ease infinite;
+  text-shadow: 0 0 50px rgba(0, 212, 255, 0.5);
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.section-title-project::after {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 4px;
+  background: linear-gradient(90deg, transparent, #00d4ff, #ff6b9d, #c471ed, transparent);
+  border-radius: 2px;
+  animation: pulseGlow 2s ease-in-out infinite alternate;
+}
+
+@keyframes pulseGlow {
+  from {
+    box-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
+  }
+  to {
+    box-shadow: 0 0 25px rgba(255, 107, 157, 0.8), 0 0 35px rgba(196, 113, 237, 0.6);
+  }
 }
 
 /* Card Container */
@@ -39,14 +77,34 @@ body {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 40px;
+  padding: 20px;
 }
 
 /* Individual Card */
 .project-card {
-  perspective: 1000px;
-  width: 250px;
-  height: 300px;
+  perspective: 1200px;
+  width: 280px;
+  height: 350px;
+  position: relative;
+  animation: float 6s ease-in-out infinite;
+}
+
+.project-card:nth-child(2) {
+  animation-delay: -2s;
+}
+
+.project-card:nth-child(3) {
+  animation-delay: -4s;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
 }
 
 .card-inner {
@@ -55,7 +113,7 @@ body {
   height: 100%;
   transform-style: preserve-3d;
   transform: rotateY(0deg);
-  transition: transform 0.8s cubic-bezier(0.4, 0.2, 0.2, 1);
+  transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .project-card:hover .card-inner {
@@ -63,61 +121,144 @@ body {
   cursor: pointer;
 }
 
-/* Front Face */
+.project-card:hover .card-front {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.project-card:hover .card-back {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Glassmorphism effect base */
 .card-front,
 .card-back {
   position: absolute;
   width: 100%;
   height: 100%;
   backface-visibility: hidden;
-  border-radius: 12px;
+  border-radius: 20px;
   overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   text-align: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 
+    0 0 0 1px rgba(255, 255, 255, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  transition: all 0.4s ease;
+  top: 0;
+  left: 0;
 }
 
+/* Front Face - Glassmorphism */
 .card-front {
-  background: linear-gradient(135deg, #3e4c59, #20232a);
+  background: linear-gradient(135deg, 
+    rgba(255, 255, 255, 0.1) 0%,
+    rgba(255, 255, 255, 0.05) 50%,
+    rgba(0, 0, 0, 0.1) 100%
+  );
   color: #ffffff;
+  opacity: 1;
+  visibility: visible;
 }
 
 .card-front h3 {
-  font-size: 1.5rem;
-  margin-bottom: 0.5rem;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #00d4ff, #ff6b9d, #c471ed);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 0 0 30px rgba(0, 212, 255, 0.5);
 }
 
 .card-front p {
-  font-size: 1.1rem;
-  color: #f0db4f;
-  font-weight: bold;
-  margin: 4px 0; /* Reduce spacing */
+  font-size: 1.2rem;
+  color: #00d4ff;
+  font-weight: 600;
+  margin: 8px 0;
+  text-shadow: 0 0 20px rgba(0, 212, 255, 0.6);
 }
 
-/* Back Face */
+/* Back Face - Enhanced Glassmorphism */
 .card-back {
-  background: linear-gradient(135deg, #20232a, #61dafb);
+  background: linear-gradient(135deg, 
+    rgba(0, 0, 0, 0.2) 0%,
+    rgba(255, 255, 255, 0.1) 50%,
+    rgba(0, 0, 0, 0.3) 100%
+  );
   color: #ffffff;
   transform: rotateY(180deg);
+  opacity: 0;
+  visibility: hidden;
 }
 
 .card-back h3 {
-  font-size: 1.5rem;
-  margin-bottom: 0.5rem;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #ff6b9d, #00d4ff, #c471ed);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .card-back p {
-  font-size: 1rem;
-  padding: 0 10px;
+  font-size: 1.1rem;
+  padding: 0 20px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.9);
 }
 
 /* Responsive Design */
+@media screen and (max-width: 1024px) {
+  .project-cards {
+    gap: 30px;
+  }
+  
+  .project-card {
+    width: 260px;
+    height: 320px;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .project-cards {
-    gap: 15px;
+    gap: 25px;
+    padding: 15px;
+  }
+
+  .project-card {
+    width: 240px;
+    height: 300px;
+  }
+
+  .card-front h3,
+  .card-back h3 {
+    font-size: 1.6rem;
+  }
+
+  .card-front p {
+    font-size: 1.1rem;
+  }
+  
+  .card-back p {
+    font-size: 1rem;
+    padding: 0 15px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .project-cards {
+    gap: 20px;
+    padding: 10px;
   }
 
   .project-card {
@@ -127,11 +268,27 @@ body {
 
   .card-front h3,
   .card-back h3 {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
+    margin-bottom: 0.8rem;
   }
 
-  .card-front p,
+  .card-front p {
+    font-size: 1rem;
+    margin: 6px 0;
+  }
+  
   .card-back p {
     font-size: 0.9rem;
+    padding: 0 12px;
+    line-height: 1.5;
+  }
+  
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-5px);
+    }
   }
 }
