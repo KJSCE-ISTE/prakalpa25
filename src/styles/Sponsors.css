@@ -144,7 +144,7 @@
 .sponsor-logo {
   max-width: 100%;
   height: auto;
-  max-height: 130px;
+  /* max-height: 130px; */
   transition: transform 0.3s ease;
 }
 

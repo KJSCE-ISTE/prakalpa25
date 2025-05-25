@@ -50,7 +50,6 @@ const ProjectsSection = () => {
             </div>
           ))}
         </div>
-        <p style={{ position: 'relative', zIndex: 1, fontSize: '1rem', color: 'white' }}>*Subject to change</p> {/* Ensure visibility on top of particles bg and match font */}
       </div>
     </div>
   );
