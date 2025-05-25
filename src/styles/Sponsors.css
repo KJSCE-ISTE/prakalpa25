@@ -1,0 +1,276 @@
+@import url("https://fonts.googleapis.com/css2?family=Kanit&display=swap");
+
+.sponsors-section {
+  min-height: 100vh;
+  width: 100%;
+  padding: 100px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9));
+  overflow: hidden;
+}
+
+.sponsors-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at center, rgba(0, 255, 255, 0.05) 0%, transparent 70%);
+  z-index: 0;
+}
+
+.sponsors-container {
+  width: 90%;
+  max-width: 1400px;
+  z-index: 1;
+  position: relative;
+}
+
+.sponsors-title {
+  font-family: 'Kanit', sans-serif;
+  font-size: 3.5rem;
+  color: whitesmoke;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+.sponsors-title::after {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(90deg, transparent, rgba(0, 255, 255, 0.7), transparent);
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 2px;
+}
+
+.sponsors-description {
+  text-align: center;
+  margin-bottom: 3rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.sponsors-description p {
+  color: rgba(245, 245, 245, 0.8);
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+.sponsor-category {
+  margin-bottom: 4rem;
+}
+
+.category-title {
+  font-family: 'Kanit', sans-serif;
+  font-size: 2rem;
+  color: whitesmoke;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+.category-title::after {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(0, 255, 255, 0.5), transparent);
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 2px;
+}
+
+.sponsor-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2.5rem;
+  margin-top: 2rem;
+}
+
+.sponsor-card {
+  position: relative;
+  border-radius: 15px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sponsor-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 15px;
+  padding: 2px;
+  background: linear-gradient(225deg, rgba(0, 255, 255, 0.7), transparent);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+.sponsor-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 255, 255, 0.1);
+}
+
+.sponsor-card:hover::before {
+  opacity: 1;
+}
+
+.sponsor-logo-container {
+  background-color: rgba(24, 24, 27, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem;
+  border-radius: 12px;
+}
+
+.sponsor-logo {
+  max-width: 100%;
+  height: auto;
+  max-height: 130px;
+  transition: transform 0.3s ease;
+}
+
+.sponsor-card:hover .sponsor-logo {
+  transform: scale(1.05);
+}
+
+/* Different sizes based on sponsorship tier */
+.all-sponsors .sponsor-card {
+  width: 220px;
+  height: 180px;
+}
+
+.food-sponsors .sponsor-card {
+  width: 180px;
+  height: 150px;
+}
+
+/* Tier-specific styling */
+.sponsor-card::before {
+  background: linear-gradient(225deg, rgba(0, 255, 255, 0.7), transparent);
+}
+
+.sponsor-card.food::before {
+  background: linear-gradient(225deg, rgba(255, 145, 0, 0.5), transparent);
+}
+
+/* Fancy hover effects */
+.sponsor-card::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    to bottom right,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0) 40%,
+    rgba(255, 255, 255, 0.4) 50%,
+    rgba(255, 255, 255, 0) 60%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: rotate(30deg);
+  transition: transform 0.7s;
+  opacity: 0;
+}
+
+.sponsor-card:hover::after {
+  transform: rotate(30deg) translate(150%, 150%);
+  opacity: 1;
+}
+
+/* Responsive design */
+@media (max-width: 1200px) {
+  .all-sponsors .sponsor-card {
+    width: 200px;
+    height: 160px;
+  }
+  
+  .food-sponsors .sponsor-card {
+    width: 170px;
+    height: 140px;
+  }
+}
+
+@media (max-width: 768px) {
+  .sponsors-section {
+    padding: 70px 0;
+  }
+  
+  .sponsors-title {
+    font-size: 2.8rem;
+  }
+  
+  .category-title {
+    font-size: 1.8rem;
+  }
+  
+  .sponsor-grid {
+    gap: 1.5rem;
+  }
+  
+  .all-sponsors .sponsor-card,
+  .food-sponsors .sponsor-card {
+    width: 170px;
+    height: 140px;
+  }
+  
+  .sponsor-logo {
+    max-height: 100px;
+  }
+}
+
+@media (max-width: 480px) {
+  .sponsors-section {
+    padding: 50px 0;
+  }
+  
+  .sponsors-title {
+    font-size: 2.2rem;
+  }
+  
+  .category-title {
+    font-size: 1.5rem;
+  }
+  
+  .sponsors-description p {
+    font-size: 1rem;
+  }
+  
+  .sponsor-grid {
+    gap: 1rem;
+  }
+  
+  .all-sponsors .sponsor-card,
+  .food-sponsors .sponsor-card {
+    width: 140px;
+    height: 120px;
+  }
+  
+  .sponsor-logo {
+    max-height: 80px;
+  }
+  
+  .sponsor-logo-container {
+    padding: 1rem;
+  }
+}

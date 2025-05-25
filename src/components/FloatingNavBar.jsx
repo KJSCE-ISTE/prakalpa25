@@ -47,6 +47,7 @@ const FloatingNavBar = () => {
                     <a className="navBarElement" href="#home">Home</a>
                     <a className="navBarElement" href="#themes">Themes</a>
                     <a className="navBarElement" href="#prizes">Prizes</a>
+                    <a className="navBarElement" href="#sponsors">Sponsors</a>
                     <a className="navBarElement" href="https://drive.google.com/file/d/1K00oUH0d0U0WOxBHoBPjEcV0RSsCwv4h/view?usp=drive_link" target="_blank" rel="noreferrer">Brochure</a>
                     <a className="navBarElement" href="#register">Register</a>
                 </div>

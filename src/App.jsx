@@ -9,6 +9,7 @@ import FloatingNavBar from './components/FloatingNavBar';
 import { useNavigate } from 'react-router-dom';
 import Register from './components/Register';
 import Timeline from './components/Timeline';
+import Sponsors from './components/Sponsors';
 
 function App() {
   useEffect(() => {
@@ -39,6 +40,7 @@ function App() {
       <ThemePage />
       <ProjectsSection />
       <Timeline />
+      <Sponsors />
       <Register />
       <Footer />
     </>
