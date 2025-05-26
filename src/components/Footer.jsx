@@ -4,7 +4,7 @@ import isteLogo from "../assets/global/IsteFinal.svg";
 import kjsceLogo from "../assets/global/kjsce_white.svg";
 import instagramIcon from "../assets/icons/instagram.svg";  
 import linkedinIcon from "../assets/icons/linkedin.svg";
-import kjscelogo from "../assets/global/kjsce_white.svg";
+import kjscelogo from "../assets/global/KJSSELOGO.svg";
 import emailIcon from "../assets/icons/image.png";
 
 const Footer = () => {
