@@ -13,17 +13,17 @@ import papel from "../assets/sponsor-logos/PAPEL.png";
 import riddl from "../assets/sponsor-logos/RIDDL.png";
 import siGlobal from "../assets/sponsor-logos/SI-GLOBAL.png";
 import smaaash from "../assets/sponsor-logos/SMAAASH.png";
-
+import xyz from "../assets/sponsor-logos/xyz.png";
 const Sponsors = () => {
   // Define sponsor categories and logos
-  const allSponsors = [siGlobal, interviewBuddy, hamperOfJoy, riddl, mojoco, smaaash, alpha8, akizer, hop, loveAndLatte,papel];
+  const allSponsors = [siGlobal, interviewBuddy, hamperOfJoy, riddl, mojoco, smaaash, alpha8, akizer, hop, loveAndLatte,papel, xyz];
 
   return (
     <section id="sponsors" className="sponsors-section">
       <div className="sponsors-container">
         <h2 className="sponsors-title">Our Sponsors</h2>
         <div className="sponsors-description">
-          <p>We extend our sincere gratitude to the organizations that have made Prakalpa 25 possible.</p>
+          <p>We extend our sincere gratitude to the organizations that have made Prakalpa'25 possible.</p>
         </div>
 
         {/* All Sponsors */}
