@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import './ThemePage.css';
 import Card from '../../components/Card';
 import useSmoothScrollTo from '../../hooks/useSmoothScrollTo';
@@ -20,24 +20,40 @@ const cards = [
 
 const ThemePage = () => {
   const themeBind = useSmoothScrollTo('#themes');
+  const carouselRef = useRef(null);
 
   const handleScroll = () => {
     const header = document.querySelector('.themesHeader');
+    const subtitle = document.querySelector('.themesSubtitle');
     const threshold = window.innerHeight / 3;
 
     if (window.scrollY >= threshold) {
-      header.style.transform = 'translateX(0%)';
+      header.style.transform = 'translateY(0%)';
       header.style.opacity = '1';
+      if (subtitle) {
+        subtitle.style.transform = 'translateY(0%)';
+        subtitle.style.opacity = '1';
+      }
     } else {
-      header.style.transform = 'translateX(-100%)';
+      header.style.transform = 'translateY(-50px)';
       header.style.opacity = '0';
+      if (subtitle) {
+        subtitle.style.transform = 'translateY(50px)';
+        subtitle.style.opacity = '0';
+      }
     }
   };
 
   useEffect(() => {
     const header = document.querySelector('.themesHeader');
-    header.style.transform = 'translateX(-100%)';
+    const subtitle = document.querySelector('.themesSubtitle');
+    
+    header.style.transform = 'translateY(-50px)';
     header.style.opacity = '0';
+    if (subtitle) {
+      subtitle.style.transform = 'translateY(50px)';
+      subtitle.style.opacity = '0';
+    }
 
     window.addEventListener('scroll', handleScroll);
     return () => {
@@ -50,18 +66,31 @@ const ThemePage = () => {
       <div className='landingAndThemePageDivide'></div>
       <div className="theme-page-bg" id="themes" {...themeBind}>
         <div className="layout">
-          <h1 className="themesHeader">Themes for the Event</h1>
-          <div className="card-container">
-            {cards.map((card, index) => (
-              <Card
-                className="individualThemeCard glow-border"
-                src={card.src}
-                title={<span className="glow-effect">{card.title}</span>}
-                description={card.description}
-                key={index}
-                onClick={(e) => e.currentTarget.classList.toggle("active")}
-              />
-            ))}
+          <div className="themes-header-container">
+            <h1 className="themesHeader">Themes for the Event</h1>
+            <p className="themesSubtitle">Explore the cutting-edge domains shaping our future</p>
+          </div>
+          <div className="carousel-container" ref={carouselRef}>
+            <div className="carousel-track">
+              {cards.map((card, index) => (
+                <div
+                  key={index}
+                  className="carousel-item"
+                  style={{
+                    '--item-index': index,
+                    '--total-items': cards.length
+                  }}
+                >
+                  <Card
+                    className="individualThemeCard glow-border"
+                    src={card.src}
+                    title={<span className="glow-effect">{card.title}</span>}
+                    description={card.description}
+                    onClick={(e) => e.currentTarget.classList.toggle("active")}
+                  />
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>
