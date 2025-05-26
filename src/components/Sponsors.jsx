@@ -16,8 +16,7 @@ import smaaash from "../assets/sponsor-logos/SMAAASH.png";
 
 const Sponsors = () => {
   // Define sponsor categories and logos
-  const allSponsors = [siGlobal, interviewBuddy, hamperOfJoy, riddl, mojoco, smaaash];
-  const foodSponsors = [alpha8, akizer, hop, loveAndLatte,papel];
+  const allSponsors = [siGlobal, interviewBuddy, hamperOfJoy, riddl, mojoco, smaaash, alpha8, akizer, hop, loveAndLatte,papel];
 
   return (
     <section id="sponsors" className="sponsors-section">
@@ -29,26 +28,12 @@ const Sponsors = () => {
 
         {/* All Sponsors */}
         <div className="sponsor-category">
-          <h3 className="category-title">Title Sponsors</h3>
+          
           <div className="sponsor-grid all-sponsors">
             {allSponsors.map((logo, index) => (
               <div className="sponsor-card" key={`sponsor-${index}`}>
                 <div className="sponsor-logo-container">
                   <img src={logo} alt={`Sponsor ${index + 1}`} className="sponsor-logo" />
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Food Sponsors */}
-        <div className="sponsor-category">
-          <h3 className="category-title">Food & Refreshments</h3>
-          <div className="sponsor-grid food-sponsors">
-            {foodSponsors.map((logo, index) => (
-              <div className="sponsor-card food" key={`food-${index}`}>
-                <div className="sponsor-logo-container">
-                  <img src={logo} alt={`Food Sponsor ${index + 1}`} className="sponsor-logo" />
                 </div>
               </div>
             ))}
