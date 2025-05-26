@@ -166,10 +166,7 @@
   height: 180px;
 }
 
-.food-sponsors .sponsor-card {
-  width: 180px;
-  height: 150px;
-}
+
 
 /* Tier-specific styling */
 .sponsor-card::before {
